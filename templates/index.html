@@ -947,27 +947,30 @@ body.has-damage-panel{
 
 @media (max-width: 1360px){
   .wrap{
-    max-width:760px !important;
-    padding:8px !important;
+    max-width:1180px !important;
+    padding:12px !important;
   }
   .grid{
-    grid-template-columns:1fr !important;
+    grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr) !important;
     gap:10px !important;
   }
   .card{
-    padding:12px !important;
+    padding:14px !important;
+    border-radius:12px !important;
   }
   .swap-wrap{
-    width:100% !important;
-    min-width:0 !important;
-    padding-top:0 !important;
+    width:48px !important;
+    min-width:48px !important;
+    padding-top:96px !important;
   }
   .swap-btn{
-    width:100% !important;
-    min-width:0 !important;
+    width:44px !important;
+    min-width:44px !important;
   }
   .poke-head{
     align-items:flex-start !important;
+    gap:10px !important;
+    margin-bottom:12px !important;
   }
   .sprite-box{
     width:84px !important;
@@ -981,15 +984,48 @@ body.has-damage-panel{
   .poke-search,
   select,
   .single-ability{
+    width:100% !important;
     max-width:100% !important;
+    font-size:18px !important;
+    padding:10px 12px !important;
+  }
+  .poke-main{
+    flex-basis:0 !important;
+  }
+  .type-icon{
+    height:24px !important;
+  }
+  .stat-inline{
+    gap:4px !important;
+  }
+  .stat-chip{
+    min-width:40px !important;
+    height:26px !important;
+    padding:0 7px !important;
+    font-size:12px !important;
+  }
+  .row{
+    margin-bottom:10px !important;
+  }
+  .title{
+    font-size:20px !important;
+  }
+  .move-detail-inline,
+  .ability-desc,
+  .status-move-desc{
+    font-size:12px !important;
+  }
+  .calc-mini-input{
+    width:70px !important;
+    min-width:70px !important;
   }
   .slot-row{
     grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
   }
   .damage-panel-inner{
-    max-width:760px !important;
-    padding-left:8px !important;
-    padding-right:8px !important;
+    max-width:1180px !important;
+    padding-left:12px !important;
+    padding-right:12px !important;
   }
   .damage-panel-text{
     white-space:normal !important;
