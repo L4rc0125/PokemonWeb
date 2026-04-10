@@ -1001,6 +1001,58 @@ body.has-damage-panel{
     width:100% !important;
   }
 }
+
+@media (max-width: 1360px){
+  .wrap{
+    max-width:760px !important;
+    padding:8px !important;
+  }
+  .grid{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+  .card{
+    padding:12px !important;
+  }
+  .swap-wrap{
+    width:100% !important;
+    min-width:0 !important;
+    padding-top:0 !important;
+  }
+  .swap-btn{
+    width:100% !important;
+    min-width:0 !important;
+  }
+  .poke-head{
+    align-items:flex-start !important;
+  }
+  .sprite-box{
+    width:84px !important;
+    height:84px !important;
+    flex:0 0 84px !important;
+  }
+  .sprite-box img{
+    width:80px !important;
+    height:80px !important;
+  }
+  .poke-search,
+  select,
+  .single-ability{
+    max-width:100% !important;
+  }
+  .slot-row{
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  }
+  .damage-panel-inner{
+    max-width:760px !important;
+    padding-left:8px !important;
+    padding-right:8px !important;
+  }
+  .damage-panel-text{
+    white-space:normal !important;
+    overflow:visible !important;
+  }
+}
 </style>
 
 </head>
