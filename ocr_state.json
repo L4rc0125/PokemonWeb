@@ -1,0 +1,11 @@
+{
+  "enabled": false,
+  "running": false,
+  "enemy_name": "",
+  "self_name": "",
+  "enemy_score": 0.0,
+  "self_score": 0.0,
+  "status": "idle",
+  "last_error": "",
+  "window_title": "モニター3 (1920x1080)"
+}
