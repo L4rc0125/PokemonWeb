@@ -861,63 +861,6 @@ body.has-damage-panel{
 
 </style>
 
-<style id="app_header_polish">
-.app-shell-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  margin:0 0 16px;
-  padding:12px 16px;
-  border:1px solid #2b3342;
-  border-radius:8px;
-  background:#1a1f29;
-}
-.app-brand-title{
-  color:#8be9fd;
-  font-size:20px;
-  font-weight:800;
-  line-height:1.2;
-}
-.app-brand-subtitle{
-  margin-top:2px;
-  color:#aab4c4;
-  font-size:12px;
-}
-.app-nav{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-.app-nav-pill{
-  display:inline-flex;
-  align-items:center;
-  height:30px;
-  padding:0 10px;
-  border:1px solid #444;
-  border-radius:8px;
-  background:#202632;
-  color:#dbe6f7;
-  font-size:12px;
-  font-weight:700;
-}
-.app-nav-pill.active{
-  background:#1784ff;
-  border-color:#34d3ff;
-  color:#fff;
-}
-@media (max-width: 900px){
-  .app-shell-header{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-  .app-nav{
-    justify-content:flex-start;
-  }
-}
-</style>
-
 <style id="layout_overflow_fix">
 .wrap{
   max-width:1200px !important;
@@ -1065,18 +1008,6 @@ body.has-damage-panel{
   <option value="{{ pokemon.jp_name }}"></option>
   {% endfor %}
 </datalist>
-
-<header class="app-shell-header">
-  <div class="app-brand">
-    <div class="app-brand-title">ダメージ計算ツール</div>
-    <div class="app-brand-subtitle">ポケモン、技、条件を選んで下のバーで結果を確認</div>
-  </div>
-  <nav class="app-nav" aria-label="ツール">
-    <span class="app-nav-pill active">ダメージ計算</span>
-    <span class="app-nav-pill">保存枠</span>
-    <span class="app-nav-pill">環境</span>
-  </nav>
-</header>
 
 <div class="grid">
 
