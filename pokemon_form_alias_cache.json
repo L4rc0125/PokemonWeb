@@ -1,0 +1,1032 @@
+{
+  "durant": {
+    "durant": [
+      "アイアント"
+    ]
+  },
+  "landorus": {
+    "landorus-incarnate": [
+      "ランドロス",
+      "けしんフォルム",
+      "ランドロス（けしんフォルム）",
+      "ランドロス(けしんフォルム)",
+      "けしん",
+      "ランドロスけしん",
+      "ランドロス（けしん）",
+      "ランドロス(けしん)"
+    ],
+    "landorus-therian": [
+      "れいじゅうフォルム",
+      "ランドロス（れいじゅうフォルム）",
+      "ランドロス(れいじゅうフォルム)",
+      "れいじゅう",
+      "ランドロスれいじゅう",
+      "ランドロス（れいじゅう）",
+      "ランドロス(れいじゅう)"
+    ]
+  },
+  "miraidon": {
+    "miraidon": [
+      "ミライドン"
+    ],
+    "miraidon-low-power-mode": [
+      "ミライドン"
+    ],
+    "miraidon-drive-mode": [
+      "ミライドン"
+    ],
+    "miraidon-aquatic-mode": [
+      "ミライドン"
+    ],
+    "miraidon-glide-mode": [
+      "ミライドン"
+    ]
+  },
+  "calyrex": {
+    "calyrex": [
+      "バドレックス"
+    ],
+    "calyrex-ice": [
+      "バドレックス"
+    ],
+    "calyrex-shadow": [
+      "バドレックス"
+    ]
+  },
+  "meloetta": {
+    "meloetta-aria": [
+      "メロエッタ",
+      "ボイスフォルム",
+      "メロエッタ（ボイスフォルム）",
+      "メロエッタ(ボイスフォルム)",
+      "ボイス",
+      "メロエッタボイス",
+      "メロエッタ（ボイス）",
+      "メロエッタ(ボイス)"
+    ],
+    "meloetta-pirouette": [
+      "ステップフォルム",
+      "メロエッタ（ステップフォルム）",
+      "メロエッタ(ステップフォルム)",
+      "ステップ",
+      "メロエッタステップ",
+      "メロエッタ（ステップ）",
+      "メロエッタ(ステップ)"
+    ]
+  },
+  "deoxys": {
+    "deoxys-normal": [
+      "デオキシス",
+      "ノーマルフォルム",
+      "デオキシス（ノーマルフォルム）",
+      "デオキシス(ノーマルフォルム)",
+      "ノーマル",
+      "デオキシスノーマル",
+      "デオキシス（ノーマル）",
+      "デオキシス(ノーマル)"
+    ],
+    "deoxys-attack": [
+      "アタックフォルム",
+      "デオキシス（アタックフォルム）",
+      "デオキシス(アタックフォルム)",
+      "アタック",
+      "デオキシスアタック",
+      "デオキシス（アタック）",
+      "デオキシス(アタック)"
+    ],
+    "deoxys-defense": [
+      "ディフェンスフォルム",
+      "デオキシス（ディフェンスフォルム）",
+      "デオキシス(ディフェンスフォルム)",
+      "ディフェンス",
+      "デオキシスディフェンス",
+      "デオキシス（ディフェンス）",
+      "デオキシス(ディフェンス)"
+    ],
+    "deoxys-speed": [
+      "スピードフォルム",
+      "デオキシス（スピードフォルム）",
+      "デオキシス(スピードフォルム)",
+      "スピード",
+      "デオキシススピード",
+      "デオキシス（スピード）",
+      "デオキシス(スピード)"
+    ]
+  },
+  "cramorant": {
+    "cramorant": [
+      "ウッウ"
+    ],
+    "cramorant-gulping": [
+      "ウッウ"
+    ],
+    "cramorant-gorging": [
+      "ウッウ"
+    ]
+  },
+  "zacian": {
+    "zacian": [
+      "ザシアン"
+    ],
+    "zacian-crowned": [
+      "ザシアン"
+    ]
+  },
+  "shaymin": {
+    "shaymin-land": [
+      "シェイミ",
+      "ランドフォルム",
+      "シェイミ（ランドフォルム）",
+      "シェイミ(ランドフォルム)",
+      "ランド",
+      "シェイミランド",
+      "シェイミ（ランド）",
+      "シェイミ(ランド)"
+    ],
+    "shaymin-sky": [
+      "スカイフォルム",
+      "シェイミ（スカイフォルム）",
+      "シェイミ(スカイフォルム)",
+      "スカイ",
+      "シェイミスカイ",
+      "シェイミ（スカイ）",
+      "シェイミ(スカイ)"
+    ]
+  },
+  "giratina": {
+    "giratina-altered": [
+      "ギラティナ",
+      "アナザーフォルム",
+      "ギラティナ（アナザーフォルム）",
+      "ギラティナ(アナザーフォルム)",
+      "アナザー",
+      "ギラティナアナザー",
+      "ギラティナ（アナザー）",
+      "ギラティナ(アナザー)"
+    ],
+    "giratina-origin": [
+      "オリジンフォルム",
+      "ギラティナ（オリジンフォルム）",
+      "ギラティナ(オリジンフォルム)",
+      "オリジン",
+      "ギラティナオリジン",
+      "ギラティナ（オリジン）",
+      "ギラティナ(オリジン)"
+    ]
+  },
+  "rotom": {
+    "rotom": [
+      "ロトム"
+    ],
+    "rotom-heat": [
+      "ロトム"
+    ],
+    "rotom-wash": [
+      "ロトム"
+    ],
+    "rotom-frost": [
+      "ロトム"
+    ],
+    "rotom-fan": [
+      "ロトム"
+    ],
+    "rotom-mow": [
+      "ロトム"
+    ]
+  },
+  "kyogre": {
+    "kyogre": [
+      "カイオーガ"
+    ],
+    "kyogre-primal": [
+      "ゲンシ",
+      "カイオーガ（ゲンシ）",
+      "カイオーガ(ゲンシ)",
+      "ゲンシカイオーガ"
+    ]
+  },
+  "groudon": {
+    "groudon": [
+      "グラードン"
+    ],
+    "groudon-primal": [
+      "ゲンシ",
+      "グラードン（ゲンシ）",
+      "グラードン(ゲンシ)",
+      "ゲンシグラードン"
+    ]
+  },
+  "zamazenta": {
+    "zamazenta": [
+      "ザマゼンタ"
+    ],
+    "zamazenta-crowned": [
+      "ザマゼンタ"
+    ]
+  },
+  "ogerpon": {
+    "ogerpon": [
+      "オーガポン"
+    ],
+    "ogerpon-wellspring-mask": [
+      "いどのめん",
+      "オーガポンいどのめん",
+      "オーガポン（いどのめん）",
+      "オーガポン(いどのめん)"
+    ],
+    "ogerpon-hearthflame-mask": [
+      "かまどのめん",
+      "オーガポンかまどのめん",
+      "オーガポン（かまどのめん）",
+      "オーガポン(かまどのめん)"
+    ],
+    "ogerpon-cornerstone-mask": [
+      "いしずえのめん",
+      "オーガポンいしずえのめん",
+      "オーガポン（いしずえのめん）",
+      "オーガポン(いしずえのめん)"
+    ]
+  },
+  "lucario": {
+    "lucario": [
+      "ルカリオ"
+    ],
+    "lucario-mega": [
+      "メガルカリオ",
+      "ルカリオメガ",
+      "ルカリオ（メガ）",
+      "ルカリオ(メガ)"
+    ],
+    "lucario-mega-z": [
+      "メガルカリオ",
+      "ルカリオメガ",
+      "ルカリオ（メガ）",
+      "ルカリオ(メガ)"
+    ]
+  },
+  "salamence": {
+    "salamence": [
+      "ボーマンダ"
+    ],
+    "salamence-mega": [
+      "メガボーマンダ",
+      "ボーマンダメガ",
+      "ボーマンダ（メガ）",
+      "ボーマンダ(メガ)"
+    ]
+  },
+  "charizard": {
+    "charizard": [
+      "リザードン"
+    ],
+    "charizard-mega-x": [
+      "メガリザードンX",
+      "メガリザードンＸ",
+      "リザードン（メガX）",
+      "リザードン(メガX)"
+    ],
+    "charizard-mega-y": [
+      "メガリザードンY",
+      "メガリザードンＹ",
+      "リザードン（メガY）",
+      "リザードン(メガY)"
+    ],
+    "charizard-gmax": [
+      "リザードン"
+    ]
+  },
+  "primarina": {
+    "primarina": [
+      "アシレーヌ"
+    ]
+  },
+  "guzzlord": {
+    "guzzlord": [
+      "アクジキング"
+    ]
+  },
+  "regieleki": {
+    "regieleki": [
+      "レジエレキ"
+    ]
+  },
+  "rayquaza": {
+    "rayquaza": [
+      "レックウザ"
+    ],
+    "rayquaza-mega": [
+      "メガレックウザ",
+      "レックウザ（メガ）",
+      "レックウザ(メガ)"
+    ]
+  },
+  "samurott": {
+    "samurott": [
+      "ダイケンキ"
+    ],
+    "samurott-hisui": [
+      "ダイケンキヒスイ",
+      "ダイケンキ（ヒスイ）",
+      "ダイケンキ(ヒスイ)"
+    ]
+  },
+  "flutter-mane": {
+    "flutter-mane": [
+      "ハバタクカミ"
+    ]
+  },
+  "corviknight": {
+    "corviknight": [
+      "アーマーガア"
+    ],
+    "corviknight-gmax": [
+      "アーマーガア"
+    ]
+  },
+  "archaludon": {
+    "archaludon": [
+      "ブリジュラス"
+    ]
+  },
+  "dragapult": {
+    "dragapult": [
+      "ドラパルト"
+    ]
+  },
+  "zapdos": {
+    "zapdos": [
+      "サンダー"
+    ],
+    "zapdos-galar": [
+      "サンダーガラル",
+      "サンダー（ガラル）",
+      "サンダー(ガラル)"
+    ]
+  },
+  "venusaur": {
+    "venusaur": [
+      "フシギバナ"
+    ],
+    "venusaur-mega": [
+      "メガフシギバナ",
+      "フシギバナ（メガ）",
+      "フシギバナ(メガ)"
+    ],
+    "venusaur-gmax": [
+      "フシギバナ"
+    ]
+  },
+  "zoroark": {
+    "zoroark": [
+      "ゾロアーク"
+    ],
+    "zoroark-hisui": [
+      "ゾロアークヒスイ",
+      "ゾロアーク（ヒスイ）",
+      "ゾロアーク(ヒスイ)"
+    ]
+  },
+  "heatran": {
+    "heatran": [
+      "ヒードラン"
+    ],
+    "heatran-mega": [
+      "メガヒードラン",
+      "ヒードラン（メガ）",
+      "ヒードラン(メガ)"
+    ]
+  },
+  "chien-pao": {
+    "chien-pao": [
+      "パオジアン"
+    ]
+  },
+  "meganium": {
+    "meganium": [
+      "メガニウム"
+    ],
+    "meganium-mega": [
+      "メガメガニウム",
+      "メガニウム（メガ）",
+      "メガニウム(メガ)"
+    ]
+  },
+  "lapras": {
+    "lapras": [
+      "ラプラス"
+    ],
+    "lapras-gmax": [
+      "ラプラス"
+    ]
+  },
+  "blaziken": {
+    "blaziken": [
+      "バシャーモ"
+    ],
+    "blaziken-mega": [
+      "メガバシャーモ",
+      "バシャーモ（メガ）",
+      "バシャーモ(メガ)"
+    ]
+  },
+  "dragonite": {
+    "dragonite": [
+      "カイリュー"
+    ],
+    "dragonite-mega": [
+      "メガカイリュー",
+      "カイリュー（メガ）",
+      "カイリュー(メガ)"
+    ]
+  },
+  "raikou": {
+    "raikou": [
+      "ライコウ"
+    ]
+  },
+  "mudsdale": {
+    "mudsdale": [
+      "バンバドロ"
+    ]
+  },
+  "urshifu": {
+    "urshifu-single-strike": [
+      "ウーラオス"
+    ],
+    "urshifu-rapid-strike": [
+      "ウーラオス"
+    ],
+    "urshifu-single-strike-gmax": [
+      "ウーラオス"
+    ],
+    "urshifu-rapid-strike-gmax": [
+      "ウーラオス"
+    ]
+  },
+  "breloom": {
+    "breloom": [
+      "キノガッサ"
+    ]
+  },
+  "azelf": {
+    "azelf": [
+      "アグノム"
+    ]
+  },
+  "beautifly": {
+    "beautifly": [
+      "アゲハント"
+    ]
+  },
+  "ribombee": {
+    "ribombee": [
+      "アブリボン"
+    ],
+    "ribombee-totem": [
+      "アブリボン"
+    ]
+  },
+  "arceus": {
+    "arceus": [
+      "アルセウス"
+    ]
+  },
+  "basculegion": {
+    "basculegion-male": [
+      "イダイトウ"
+    ],
+    "basculegion-female": [
+      "イダイトウ"
+    ]
+  },
+  "unown": {
+    "unown": [
+      "アンノーン"
+    ]
+  },
+  "entei": {
+    "entei": [
+      "エンテイ"
+    ]
+  },
+  "regidrago": {
+    "regidrago": [
+      "レジドラゴ"
+    ]
+  },
+  "terrakion": {
+    "terrakion": [
+      "テラキオン"
+    ]
+  },
+  "clefable": {
+    "clefable": [
+      "ピクシー"
+    ],
+    "clefable-mega": [
+      "メガピクシー",
+      "ピクシー（メガ）",
+      "ピクシー(メガ)"
+    ]
+  },
+  "feraligatr": {
+    "feraligatr": [
+      "オーダイル"
+    ],
+    "feraligatr-mega": [
+      "メガオーダイル",
+      "オーダイル（メガ）",
+      "オーダイル(メガ)"
+    ]
+  },
+  "slakoth": {
+    "slakoth": [
+      "ナマケロ"
+    ]
+  },
+  "moltres": {
+    "moltres": [
+      "ファイヤー"
+    ],
+    "moltres-galar": [
+      "ファイヤーガラル",
+      "ファイヤー（ガラル）",
+      "ファイヤー(ガラル)"
+    ]
+  },
+  "hydreigon": {
+    "hydreigon": [
+      "サザンドラ"
+    ]
+  },
+  "umbreon": {
+    "umbreon": [
+      "ブラッキー"
+    ]
+  },
+  "kangaskhan": {
+    "kangaskhan": [
+      "ガルーラ"
+    ],
+    "kangaskhan-mega": [
+      "メガガルーラ",
+      "ガルーラ（メガ）",
+      "ガルーラ(メガ)"
+    ]
+  },
+  "snorlax": {
+    "snorlax": [
+      "カビゴン"
+    ],
+    "snorlax-gmax": [
+      "カビゴン"
+    ]
+  },
+  "dragalge": {
+    "dragalge": [
+      "ドラミドロ"
+    ],
+    "dragalge-mega": [
+      "メガドラミドロ",
+      "ドラミドロ（メガ）",
+      "ドラミドロ(メガ)"
+    ]
+  },
+  "whimsicott": {
+    "whimsicott": [
+      "エルフーン"
+    ]
+  },
+  "dustox": {
+    "dustox": [
+      "ドクケイル"
+    ]
+  },
+  "ho-oh": {
+    "ho-oh": [
+      "ホウオウ"
+    ]
+  },
+  "metagross": {
+    "metagross": [
+      "メタグロス"
+    ],
+    "metagross-mega": [
+      "メガメタグロス",
+      "メタグロス（メガ）",
+      "メタグロス(メガ)"
+    ]
+  },
+  "greninja": {
+    "greninja": [
+      "ゲッコウガ"
+    ],
+    "greninja-battle-bond": [
+      "ゲッコウガ"
+    ],
+    "greninja-ash": [
+      "ゲッコウガ"
+    ],
+    "greninja-mega": [
+      "メガゲッコウガ",
+      "ゲッコウガ（メガ）",
+      "ゲッコウガ(メガ)"
+    ]
+  },
+  "cinderace": {
+    "cinderace": [
+      "エースバーン"
+    ],
+    "cinderace-gmax": [
+      "エースバーン"
+    ]
+  },
+  "slowbro": {
+    "slowbro": [
+      "ヤドラン"
+    ],
+    "slowbro-mega": [
+      "メガヤドラン",
+      "ヤドラン（メガ）",
+      "ヤドラン(メガ)"
+    ],
+    "slowbro-galar": [
+      "ヤドランガラル",
+      "ヤドラン（ガラル）",
+      "ヤドラン(ガラル)"
+    ]
+  },
+  "tinkaton": {
+    "tinkaton": [
+      "デカヌチャン"
+    ]
+  },
+  "toxapex": {
+    "toxapex": [
+      "ドヒドイデ"
+    ]
+  },
+  "gliscor": {
+    "gliscor": [
+      "グライオン"
+    ]
+  },
+  "tapu-fini": {
+    "tapu-fini": [
+      "カプ・レヒレ"
+    ]
+  },
+  "ting-lu": {
+    "ting-lu": [
+      "ディンルー"
+    ]
+  },
+  "koraidon": {
+    "koraidon": [
+      "コライドン"
+    ],
+    "koraidon-limited-build": [
+      "コライドン"
+    ],
+    "koraidon-sprinting-build": [
+      "コライドン"
+    ],
+    "koraidon-swimming-build": [
+      "コライドン"
+    ],
+    "koraidon-gliding-build": [
+      "コライドン"
+    ]
+  },
+  "solgaleo": {
+    "solgaleo": [
+      "ソルガレオ"
+    ]
+  },
+  "lunala": {
+    "lunala": [
+      "ルナアーラ"
+    ]
+  },
+  "xerneas": {
+    "xerneas": [
+      "ゼルネアス"
+    ]
+  },
+  "yveltal": {
+    "yveltal": [
+      "イベルタル"
+    ]
+  },
+  "zekrom": {
+    "zekrom": [
+      "ゼクロム"
+    ]
+  },
+  "reshiram": {
+    "reshiram": [
+      "レシラム"
+    ]
+  },
+  "dialga": {
+    "dialga": [
+      "ディアルガ"
+    ],
+    "dialga-origin": [
+      "ディアルガ"
+    ]
+  },
+  "palkia": {
+    "palkia": [
+      "パルキア"
+    ],
+    "palkia-origin": [
+      "パルキア"
+    ]
+  },
+  "skarmory": {
+    "skarmory": [
+      "エアームド"
+    ],
+    "skarmory-mega": [
+      "メガエアームド",
+      "エアームド（メガ）",
+      "エアームド(メガ)"
+    ]
+  },
+  "gengar": {
+    "gengar": [
+      "ゲンガー"
+    ],
+    "gengar-mega": [
+      "メガゲンガー",
+      "ゲンガー（メガ）",
+      "ゲンガー(メガ)"
+    ],
+    "gengar-gmax": [
+      "ゲンガー"
+    ]
+  },
+  "ursaluna": {
+    "ursaluna": [
+      "ガチグマ"
+    ],
+    "ursaluna-bloodmoon": [
+      "ガチグマ"
+    ]
+  },
+  "clodsire": {
+    "clodsire": [
+      "ドオー"
+    ]
+  },
+  "grimmsnarl": {
+    "grimmsnarl": [
+      "オーロンゲ"
+    ],
+    "grimmsnarl-gmax": [
+      "オーロンゲ"
+    ]
+  },
+  "gholdengo": {
+    "gholdengo": [
+      "サーフゴー"
+    ]
+  },
+  "dondozo": {
+    "dondozo": [
+      "ヘイラッシャ"
+    ]
+  },
+  "absol": {
+    "absol": [
+      "アブソル"
+    ],
+    "absol-mega": [
+      "メガアブソル",
+      "アブソル（メガ）",
+      "アブソル(メガ)"
+    ],
+    "absol-mega-z": [
+      "メガアブソル",
+      "アブソル（メガ）",
+      "アブソル(メガ)"
+    ]
+  },
+  "baxcalibur": {
+    "baxcalibur": [
+      "セグレイブ"
+    ],
+    "baxcalibur-mega": [
+      "メガセグレイブ",
+      "セグレイブ（メガ）",
+      "セグレイブ(メガ)"
+    ]
+  },
+  "lugia": {
+    "lugia": [
+      "ルギア"
+    ]
+  },
+  "sneasler": {
+    "sneasler": [
+      "オオニューラ"
+    ]
+  },
+  "mimikyu": {
+    "mimikyu-disguised": [
+      "ミミッキュ"
+    ],
+    "mimikyu-busted": [
+      "ミミッキュ"
+    ],
+    "mimikyu-totem-disguised": [
+      "ミミッキュ"
+    ],
+    "mimikyu-totem-busted": [
+      "ミミッキュ"
+    ]
+  },
+  "incineroar": {
+    "incineroar": [
+      "ガオガエン"
+    ]
+  },
+  "terapagos": {
+    "terapagos": [
+      "テラパゴス"
+    ],
+    "terapagos-terastal": [
+      "テラパゴス"
+    ],
+    "terapagos-stellar": [
+      "テラパゴス"
+    ]
+  },
+  "glimmora": {
+    "glimmora": [
+      "キラフロル"
+    ],
+    "glimmora-mega": [
+      "メガキラフロル",
+      "キラフロル（メガ）",
+      "キラフロル(メガ)"
+    ]
+  },
+  "crawdaunt": {
+    "crawdaunt": [
+      "シザリガー"
+    ]
+  },
+  "aegislash": {
+    "aegislash-shield": [
+      "ギルガルド"
+    ],
+    "aegislash-blade": [
+      "ギルガルド"
+    ]
+  },
+  "blastoise": {
+    "blastoise": [
+      "カメックス"
+    ],
+    "blastoise-mega": [
+      "メガカメックス",
+      "カメックス（メガ）",
+      "カメックス(メガ)"
+    ],
+    "blastoise-gmax": [
+      "カメックス"
+    ]
+  },
+  "beedrill": {
+    "beedrill": [
+      "スピアー"
+    ],
+    "beedrill-mega": [
+      "メガスピアー",
+      "スピアー（メガ）",
+      "スピアー(メガ)"
+    ]
+  },
+  "garchomp": {
+    "garchomp": [
+      "ガブリアス"
+    ],
+    "garchomp-mega": [
+      "メガガブリアス",
+      "ガブリアス（メガ）",
+      "ガブリアス(メガ)"
+    ],
+    "garchomp-mega-z": [
+      "メガガブリアス",
+      "ガブリアス（メガ）",
+      "ガブリアス(メガ)"
+    ]
+  },
+  "froslass": {
+    "froslass": [
+      "ユキメノコ"
+    ],
+    "froslass-mega": [
+      "メガユキメノコ",
+      "ユキメノコ（メガ）",
+      "ユキメノコ(メガ)"
+    ]
+  },
+  "tyranitar": {
+    "tyranitar": [
+      "バンギラス"
+    ],
+    "tyranitar-mega": [
+      "メガバンギラス",
+      "バンギラス（メガ）",
+      "バンギラス(メガ)"
+    ]
+  },
+  "steelix": {
+    "steelix": [
+      "ハガネール"
+    ],
+    "steelix-mega": [
+      "メガハガネール",
+      "ハガネール（メガ）",
+      "ハガネール(メガ)"
+    ]
+  },
+  "excadrill": {
+    "excadrill": [
+      "ドリュウズ"
+    ],
+    "excadrill-mega": [
+      "メガドリュウズ",
+      "ドリュウズ（メガ）",
+      "ドリュウズ(メガ)"
+    ]
+  },
+  "scovillain": {
+    "scovillain": [
+      "スコヴィラン"
+    ],
+    "scovillain-mega": [
+      "メガスコヴィラン",
+      "スコヴィラン（メガ）",
+      "スコヴィラン(メガ)"
+    ]
+  },
+  "victreebel": {
+    "victreebel": [
+      "ウツボット"
+    ],
+    "victreebel-mega": [
+      "メガウツボット",
+      "ウツボット（メガ）",
+      "ウツボット(メガ)"
+    ]
+  },
+  "starmie": {
+    "starmie": [
+      "スターミー"
+    ],
+    "starmie-mega": [
+      "メガスターミー",
+      "スターミー（メガ）",
+      "スターミー(メガ)"
+    ]
+  },
+  "dratini": {
+    "dratini": [
+      "ミニリュウ"
+    ]
+  },
+  "zorua": {
+    "zorua": [
+      "ゾロア"
+    ],
+    "zorua-hisui": [
+      "ゾロアヒスイ",
+      "ゾロア（ヒスイ）",
+      "ゾロア(ヒスイ)"
+    ]
+  },
+  "cranidos": {
+    "cranidos": [
+      "ズガイドス"
+    ]
+  },
+  "buneary": {
+    "buneary": [
+      "ミミロル"
+    ]
+  },
+  "gyarados": {
+    "gyarados": [
+      "ギャラドス"
+    ],
+    "gyarados-mega": [
+      "メガギャラドス",
+      "ギャラドス（メガ）",
+      "ギャラドス(メガ)"
+    ]
+  }
+}

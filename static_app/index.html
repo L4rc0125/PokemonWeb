@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokemon Web Static</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Pokemon Web</h1>
+      <div id="status" class="status">読み込み中...</div>
+    </header>
+
+    <section class="grid">
+      <article class="panel" data-side="attacker">
+        <h2>Attacker</h2>
+        <div class="poke-head">
+          <div class="sprite-box"><img id="attacker_sprite" alt=""></div>
+          <div class="poke-main">
+            <input id="attacker_search" class="poke-search" autocomplete="off" placeholder="検索">
+            <div id="attacker_suggest" class="suggest-box"></div>
+            <div class="type-stat-row">
+              <div id="attacker_types" class="type-icons"></div>
+              <div id="attacker_stats" class="stat-inline"></div>
+            </div>
+          </div>
+        </div>
+        <div id="attacker_weakness" class="weakness-row"></div>
+        <div class="section-title">特性</div>
+        <div id="attacker_abilities" class="ability-list"></div>
+        <div class="section-title">技</div>
+        <select id="attacker_moves" class="move-select"></select>
+      </article>
+
+      <article class="panel" data-side="defender">
+        <h2>Defender</h2>
+        <div class="poke-head">
+          <div class="sprite-box"><img id="defender_sprite" alt=""></div>
+          <div class="poke-main">
+            <input id="defender_search" class="poke-search" autocomplete="off" placeholder="検索">
+            <div id="defender_suggest" class="suggest-box"></div>
+            <div class="type-stat-row">
+              <div id="defender_types" class="type-icons"></div>
+              <div id="defender_stats" class="stat-inline"></div>
+            </div>
+          </div>
+        </div>
+        <div id="defender_weakness" class="weakness-row"></div>
+        <div class="section-title">特性</div>
+        <div id="defender_abilities" class="ability-list"></div>
+        <div class="section-title">技</div>
+        <select id="defender_moves" class="move-select"></select>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

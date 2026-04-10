@@ -1,0 +1,2842 @@
+[
+  {
+    "jp_name": "アイアント",
+    "api_name": "durant",
+    "species_name": "durant"
+  },
+  {
+    "jp_name": "アギルダー",
+    "api_name": "accelgor",
+    "species_name": "accelgor"
+  },
+  {
+    "jp_name": "アクジキング",
+    "api_name": "guzzlord",
+    "species_name": "guzzlord"
+  },
+  {
+    "jp_name": "アグノム",
+    "api_name": "azelf",
+    "species_name": "azelf"
+  },
+  {
+    "jp_name": "アゲハント",
+    "api_name": "beautifly",
+    "species_name": "beautifly"
+  },
+  {
+    "jp_name": "アシレーヌ",
+    "api_name": "primarina",
+    "species_name": "primarina"
+  },
+  {
+    "jp_name": "アズマオウ",
+    "api_name": "seaking",
+    "species_name": "seaking"
+  },
+  {
+    "jp_name": "アップリュー",
+    "api_name": "flapple",
+    "species_name": "flapple"
+  },
+  {
+    "jp_name": "アノホラグサ",
+    "api_name": "brambleghast",
+    "species_name": "brambleghast"
+  },
+  {
+    "jp_name": "アバゴーラ",
+    "api_name": "carracosta",
+    "species_name": "carracosta"
+  },
+  {
+    "jp_name": "アブソル",
+    "api_name": "absol",
+    "species_name": "absol"
+  },
+  {
+    "jp_name": "アブリボン",
+    "api_name": "ribombee",
+    "species_name": "ribombee"
+  },
+  {
+    "jp_name": "アマルルガ",
+    "api_name": "aurorus",
+    "species_name": "aurorus"
+  },
+  {
+    "jp_name": "アマージョ",
+    "api_name": "tsareena",
+    "species_name": "tsareena"
+  },
+  {
+    "jp_name": "アメモース",
+    "api_name": "masquerain",
+    "species_name": "masquerain"
+  },
+  {
+    "jp_name": "アヤシシ",
+    "api_name": "wyrdeer",
+    "species_name": "wyrdeer"
+  },
+  {
+    "jp_name": "アラブルタケ",
+    "api_name": "brute-bonnet",
+    "species_name": "brute-bonnet"
+  },
+  {
+    "jp_name": "アリアドス",
+    "api_name": "ariados",
+    "species_name": "ariados"
+  },
+  {
+    "jp_name": "アルセウス",
+    "api_name": "arceus",
+    "species_name": "arceus"
+  },
+  {
+    "jp_name": "アンノーン",
+    "api_name": "unown",
+    "species_name": "unown"
+  },
+  {
+    "jp_name": "アーケオス",
+    "api_name": "archeops",
+    "species_name": "archeops"
+  },
+  {
+    "jp_name": "アーゴヨン",
+    "api_name": "naganadel",
+    "species_name": "naganadel"
+  },
+  {
+    "jp_name": "アーボック",
+    "api_name": "arbok",
+    "species_name": "arbok"
+  },
+  {
+    "jp_name": "アーマルド",
+    "api_name": "armaldo",
+    "species_name": "armaldo"
+  },
+  {
+    "jp_name": "アーマーガア",
+    "api_name": "corviknight",
+    "species_name": "corviknight"
+  },
+  {
+    "jp_name": "イイネイヌ",
+    "api_name": "okidogi",
+    "species_name": "okidogi"
+  },
+  {
+    "jp_name": "イエッサン",
+    "api_name": "indeedee-male",
+    "species_name": "indeedee"
+  },
+  {
+    "jp_name": "イオルブ",
+    "api_name": "orbeetle",
+    "species_name": "orbeetle"
+  },
+  {
+    "jp_name": "イキリンコ",
+    "api_name": "squawkabilly-green-plumage",
+    "species_name": "squawkabilly"
+  },
+  {
+    "jp_name": "イシヘンジン",
+    "api_name": "stonjourner",
+    "species_name": "stonjourner"
+  },
+  {
+    "jp_name": "イダイトウ",
+    "api_name": "basculegion-male",
+    "species_name": "basculegion"
+  },
+  {
+    "jp_name": "イダイナキバ",
+    "api_name": "great-tusk",
+    "species_name": "great-tusk"
+  },
+  {
+    "jp_name": "イッカネズミ",
+    "api_name": "maushold-family-of-four",
+    "species_name": "maushold"
+  },
+  {
+    "jp_name": "イベルタル",
+    "api_name": "yveltal",
+    "species_name": "yveltal"
+  },
+  {
+    "jp_name": "イルカマン",
+    "api_name": "palafin-zero",
+    "species_name": "palafin"
+  },
+  {
+    "jp_name": "イルミーゼ",
+    "api_name": "illumise",
+    "species_name": "illumise"
+  },
+  {
+    "jp_name": "イワパレス",
+    "api_name": "crustle",
+    "species_name": "crustle"
+  },
+  {
+    "jp_name": "インテレオン",
+    "api_name": "inteleon",
+    "species_name": "inteleon"
+  },
+  {
+    "jp_name": "イーユイ",
+    "api_name": "chi-yu",
+    "species_name": "chi-yu"
+  },
+  {
+    "jp_name": "ウインディ",
+    "api_name": "arcanine",
+    "species_name": "arcanine"
+  },
+  {
+    "jp_name": "ウェーニバル",
+    "api_name": "quaquaval",
+    "species_name": "quaquaval"
+  },
+  {
+    "jp_name": "ウォーグル",
+    "api_name": "braviary",
+    "species_name": "braviary"
+  },
+  {
+    "jp_name": "ウオチルドン",
+    "api_name": "arctovish",
+    "species_name": "arctovish"
+  },
+  {
+    "jp_name": "ウオノラゴン",
+    "api_name": "dracovish",
+    "species_name": "dracovish"
+  },
+  {
+    "jp_name": "ウガツホムラ",
+    "api_name": "gouging-fire",
+    "species_name": "gouging-fire"
+  },
+  {
+    "jp_name": "ウソッキー",
+    "api_name": "sudowoodo",
+    "species_name": "sudowoodo"
+  },
+  {
+    "jp_name": "ウッウ",
+    "api_name": "cramorant",
+    "species_name": "cramorant"
+  },
+  {
+    "jp_name": "ウツボット",
+    "api_name": "victreebel",
+    "species_name": "victreebel"
+  },
+  {
+    "jp_name": "ウツロイド",
+    "api_name": "nihilego",
+    "species_name": "nihilego"
+  },
+  {
+    "jp_name": "ウネルミナモ",
+    "api_name": "walking-wake",
+    "species_name": "walking-wake"
+  },
+  {
+    "jp_name": "ウミトリオ",
+    "api_name": "wugtrio",
+    "species_name": "wugtrio"
+  },
+  {
+    "jp_name": "ウルガモス",
+    "api_name": "volcarona",
+    "species_name": "volcarona"
+  },
+  {
+    "jp_name": "ウーラオス",
+    "api_name": "urshifu-single-strike",
+    "species_name": "urshifu"
+  },
+  {
+    "jp_name": "エアームド",
+    "api_name": "skarmory",
+    "species_name": "skarmory"
+  },
+  {
+    "jp_name": "エクスレッグ",
+    "api_name": "lokix",
+    "species_name": "lokix"
+  },
+  {
+    "jp_name": "エテボース",
+    "api_name": "ambipom",
+    "species_name": "ambipom"
+  },
+  {
+    "jp_name": "エネコロロ",
+    "api_name": "delcatty",
+    "species_name": "delcatty"
+  },
+  {
+    "jp_name": "エビワラー",
+    "api_name": "hitmonchan",
+    "species_name": "hitmonchan"
+  },
+  {
+    "jp_name": "エムリット",
+    "api_name": "mesprit",
+    "species_name": "mesprit"
+  },
+  {
+    "jp_name": "エモンガ",
+    "api_name": "emolga",
+    "species_name": "emolga"
+  },
+  {
+    "jp_name": "エルフーン",
+    "api_name": "whimsicott",
+    "species_name": "whimsicott"
+  },
+  {
+    "jp_name": "エルレイド",
+    "api_name": "gallade",
+    "species_name": "gallade"
+  },
+  {
+    "jp_name": "エレキブル",
+    "api_name": "electivire",
+    "species_name": "electivire"
+  },
+  {
+    "jp_name": "エレザード",
+    "api_name": "heliolisk",
+    "species_name": "heliolisk"
+  },
+  {
+    "jp_name": "エンテイ",
+    "api_name": "entei",
+    "species_name": "entei"
+  },
+  {
+    "jp_name": "エンニュート",
+    "api_name": "salazzle",
+    "species_name": "salazzle"
+  },
+  {
+    "jp_name": "エンブオー",
+    "api_name": "emboar",
+    "species_name": "emboar"
+  },
+  {
+    "jp_name": "エンペルト",
+    "api_name": "empoleon",
+    "species_name": "empoleon"
+  },
+  {
+    "jp_name": "エースバーン",
+    "api_name": "cinderace",
+    "species_name": "cinderace"
+  },
+  {
+    "jp_name": "エーフィ",
+    "api_name": "espeon",
+    "species_name": "espeon"
+  },
+  {
+    "jp_name": "オオスバメ",
+    "api_name": "swellow",
+    "species_name": "swellow"
+  },
+  {
+    "jp_name": "オオタチ",
+    "api_name": "furret",
+    "species_name": "furret"
+  },
+  {
+    "jp_name": "オオニューラ",
+    "api_name": "sneasler",
+    "species_name": "sneasler"
+  },
+  {
+    "jp_name": "オクタン",
+    "api_name": "octillery",
+    "species_name": "octillery"
+  },
+  {
+    "jp_name": "オトシドリ",
+    "api_name": "bombirdier",
+    "species_name": "bombirdier"
+  },
+  {
+    "jp_name": "オトスパス",
+    "api_name": "grapploct",
+    "species_name": "grapploct"
+  },
+  {
+    "jp_name": "オドリドリ",
+    "api_name": "oricorio-baile",
+    "species_name": "oricorio"
+  },
+  {
+    "jp_name": "オニゴーリ",
+    "api_name": "glalie",
+    "species_name": "glalie"
+  },
+  {
+    "jp_name": "オニシズクモ",
+    "api_name": "araquanid",
+    "species_name": "araquanid"
+  },
+  {
+    "jp_name": "オニドリル",
+    "api_name": "fearow",
+    "species_name": "fearow"
+  },
+  {
+    "jp_name": "オノノクス",
+    "api_name": "haxorus",
+    "species_name": "haxorus"
+  },
+  {
+    "jp_name": "オムスター",
+    "api_name": "omastar",
+    "species_name": "omastar"
+  },
+  {
+    "jp_name": "オリーヴァ",
+    "api_name": "arboliva",
+    "species_name": "arboliva"
+  },
+  {
+    "jp_name": "オンバーン",
+    "api_name": "noivern",
+    "species_name": "noivern"
+  },
+  {
+    "jp_name": "オーガポン",
+    "api_name": "ogerpon",
+    "species_name": "ogerpon"
+  },
+  {
+    "jp_name": "オーダイル",
+    "api_name": "feraligatr",
+    "species_name": "feraligatr"
+  },
+  {
+    "jp_name": "オーベム",
+    "api_name": "beheeyem",
+    "species_name": "beheeyem"
+  },
+  {
+    "jp_name": "オーロット",
+    "api_name": "trevenant",
+    "species_name": "trevenant"
+  },
+  {
+    "jp_name": "オーロンゲ",
+    "api_name": "grimmsnarl",
+    "species_name": "grimmsnarl"
+  },
+  {
+    "jp_name": "カイオーガ",
+    "api_name": "kyogre",
+    "species_name": "kyogre"
+  },
+  {
+    "jp_name": "カイリキー",
+    "api_name": "machamp",
+    "species_name": "machamp"
+  },
+  {
+    "jp_name": "カイリュー",
+    "api_name": "dragonite",
+    "species_name": "dragonite"
+  },
+  {
+    "jp_name": "カイロス",
+    "api_name": "pinsir",
+    "species_name": "pinsir"
+  },
+  {
+    "jp_name": "カエンジシ",
+    "api_name": "pyroar-male",
+    "species_name": "pyroar"
+  },
+  {
+    "jp_name": "カクレオン",
+    "api_name": "kecleon",
+    "species_name": "kecleon"
+  },
+  {
+    "jp_name": "カジリガメ",
+    "api_name": "drednaw",
+    "species_name": "drednaw"
+  },
+  {
+    "jp_name": "カバルドン",
+    "api_name": "hippowdon",
+    "species_name": "hippowdon"
+  },
+  {
+    "jp_name": "カビゴン",
+    "api_name": "snorlax",
+    "species_name": "snorlax"
+  },
+  {
+    "jp_name": "カブトプス",
+    "api_name": "kabutops",
+    "species_name": "kabutops"
+  },
+  {
+    "jp_name": "カプ・コケコ",
+    "api_name": "tapu-koko",
+    "species_name": "tapu-koko"
+  },
+  {
+    "jp_name": "カプ・テテフ",
+    "api_name": "tapu-lele",
+    "species_name": "tapu-lele"
+  },
+  {
+    "jp_name": "カプ・ブルル",
+    "api_name": "tapu-bulu",
+    "species_name": "tapu-bulu"
+  },
+  {
+    "jp_name": "カプ・レヒレ",
+    "api_name": "tapu-fini",
+    "species_name": "tapu-fini"
+  },
+  {
+    "jp_name": "カポエラー",
+    "api_name": "hitmontop",
+    "species_name": "hitmontop"
+  },
+  {
+    "jp_name": "カマスジョー",
+    "api_name": "barraskewda",
+    "species_name": "barraskewda"
+  },
+  {
+    "jp_name": "カミツオロチ",
+    "api_name": "hydrapple",
+    "species_name": "hydrapple"
+  },
+  {
+    "jp_name": "カミツルギ",
+    "api_name": "kartana",
+    "species_name": "kartana"
+  },
+  {
+    "jp_name": "カメックス",
+    "api_name": "blastoise",
+    "species_name": "blastoise"
+  },
+  {
+    "jp_name": "カラマネロ",
+    "api_name": "malamar",
+    "species_name": "malamar"
+  },
+  {
+    "jp_name": "カラミンゴ",
+    "api_name": "flamigo",
+    "species_name": "flamigo"
+  },
+  {
+    "jp_name": "ガオガエン",
+    "api_name": "incineroar",
+    "species_name": "incineroar"
+  },
+  {
+    "jp_name": "ガケガニ",
+    "api_name": "klawf",
+    "species_name": "klawf"
+  },
+  {
+    "jp_name": "ガチグマ",
+    "api_name": "ursaluna",
+    "species_name": "ursaluna"
+  },
+  {
+    "jp_name": "ガチゴラス",
+    "api_name": "tyrantrum",
+    "species_name": "tyrantrum"
+  },
+  {
+    "jp_name": "ガブリアス",
+    "api_name": "garchomp",
+    "species_name": "garchomp"
+  },
+  {
+    "jp_name": "ガマゲロゲ",
+    "api_name": "seismitoad",
+    "species_name": "seismitoad"
+  },
+  {
+    "jp_name": "ガメノデス",
+    "api_name": "barbaracle",
+    "species_name": "barbaracle"
+  },
+  {
+    "jp_name": "ガラガラ",
+    "api_name": "marowak",
+    "species_name": "marowak"
+  },
+  {
+    "jp_name": "ガルーラ",
+    "api_name": "kangaskhan",
+    "species_name": "kangaskhan"
+  },
+  {
+    "jp_name": "ガーメイル",
+    "api_name": "mothim",
+    "species_name": "mothim"
+  },
+  {
+    "jp_name": "キチキギス",
+    "api_name": "fezandipiti",
+    "species_name": "fezandipiti"
+  },
+  {
+    "jp_name": "キテルグマ",
+    "api_name": "bewear",
+    "species_name": "bewear"
+  },
+  {
+    "jp_name": "キノガッサ",
+    "api_name": "breloom",
+    "species_name": "breloom"
+  },
+  {
+    "jp_name": "キマワリ",
+    "api_name": "sunflora",
+    "species_name": "sunflora"
+  },
+  {
+    "jp_name": "キュウコン",
+    "api_name": "ninetales",
+    "species_name": "ninetales"
+  },
+  {
+    "jp_name": "キュレム",
+    "api_name": "kyurem",
+    "species_name": "kyurem"
+  },
+  {
+    "jp_name": "キュワワー",
+    "api_name": "comfey",
+    "species_name": "comfey"
+  },
+  {
+    "jp_name": "キョジオーン",
+    "api_name": "garganacl",
+    "species_name": "garganacl"
+  },
+  {
+    "jp_name": "キラフロル",
+    "api_name": "glimmora",
+    "species_name": "glimmora"
+  },
+  {
+    "jp_name": "キレイハナ",
+    "api_name": "bellossom",
+    "species_name": "bellossom"
+  },
+  {
+    "jp_name": "キングドラ",
+    "api_name": "kingdra",
+    "species_name": "kingdra"
+  },
+  {
+    "jp_name": "キングラー",
+    "api_name": "kingler",
+    "species_name": "kingler"
+  },
+  {
+    "jp_name": "ギガイアス",
+    "api_name": "gigalith",
+    "species_name": "gigalith"
+  },
+  {
+    "jp_name": "ギギギアル",
+    "api_name": "klinklang",
+    "species_name": "klinklang"
+  },
+  {
+    "jp_name": "ギャラドス",
+    "api_name": "gyarados",
+    "species_name": "gyarados"
+  },
+  {
+    "jp_name": "ギャロップ",
+    "api_name": "rapidash",
+    "species_name": "rapidash"
+  },
+  {
+    "jp_name": "ギラティナ",
+    "api_name": "giratina-altered",
+    "species_name": "giratina"
+  },
+  {
+    "jp_name": "ギルガルド",
+    "api_name": "aegislash-shield",
+    "species_name": "aegislash"
+  },
+  {
+    "jp_name": "クイタラン",
+    "api_name": "heatmor",
+    "species_name": "heatmor"
+  },
+  {
+    "jp_name": "クエスパトラ",
+    "api_name": "espathra",
+    "species_name": "espathra"
+  },
+  {
+    "jp_name": "クチート",
+    "api_name": "mawile",
+    "species_name": "mawile"
+  },
+  {
+    "jp_name": "クリムガン",
+    "api_name": "druddigon",
+    "species_name": "druddigon"
+  },
+  {
+    "jp_name": "クレセリア",
+    "api_name": "cresselia",
+    "species_name": "cresselia"
+  },
+  {
+    "jp_name": "クレッフィ",
+    "api_name": "klefki",
+    "species_name": "klefki"
+  },
+  {
+    "jp_name": "クレベース",
+    "api_name": "avalugg",
+    "species_name": "avalugg"
+  },
+  {
+    "jp_name": "クロバット",
+    "api_name": "crobat",
+    "species_name": "crobat"
+  },
+  {
+    "jp_name": "クワガノン",
+    "api_name": "vikavolt",
+    "species_name": "vikavolt"
+  },
+  {
+    "jp_name": "グソクムシャ",
+    "api_name": "golisopod",
+    "species_name": "golisopod"
+  },
+  {
+    "jp_name": "グライオン",
+    "api_name": "gliscor",
+    "species_name": "gliscor"
+  },
+  {
+    "jp_name": "グラエナ",
+    "api_name": "mightyena",
+    "species_name": "mightyena"
+  },
+  {
+    "jp_name": "グランブル",
+    "api_name": "granbull",
+    "species_name": "granbull"
+  },
+  {
+    "jp_name": "グラードン",
+    "api_name": "groudon",
+    "species_name": "groudon"
+  },
+  {
+    "jp_name": "グレイシア",
+    "api_name": "glaceon",
+    "species_name": "glaceon"
+  },
+  {
+    "jp_name": "グレンアルマ",
+    "api_name": "armarouge",
+    "species_name": "armarouge"
+  },
+  {
+    "jp_name": "ケケンカニ",
+    "api_name": "crabominable",
+    "species_name": "crabominable"
+  },
+  {
+    "jp_name": "ケッキング",
+    "api_name": "slaking",
+    "species_name": "slaking"
+  },
+  {
+    "jp_name": "ケルディオ",
+    "api_name": "keldeo-ordinary",
+    "species_name": "keldeo"
+  },
+  {
+    "jp_name": "ケンタロス",
+    "api_name": "tauros",
+    "species_name": "tauros"
+  },
+  {
+    "jp_name": "ケンホロウ",
+    "api_name": "unfezant",
+    "species_name": "unfezant"
+  },
+  {
+    "jp_name": "ゲッコウガ",
+    "api_name": "greninja",
+    "species_name": "greninja"
+  },
+  {
+    "jp_name": "ゲノセクト",
+    "api_name": "genesect",
+    "species_name": "genesect"
+  },
+  {
+    "jp_name": "ゲンガー",
+    "api_name": "gengar",
+    "species_name": "gengar"
+  },
+  {
+    "jp_name": "コオリッポ",
+    "api_name": "eiscue-ice",
+    "species_name": "eiscue"
+  },
+  {
+    "jp_name": "ココロモリ",
+    "api_name": "swoobat",
+    "species_name": "swoobat"
+  },
+  {
+    "jp_name": "コジョンド",
+    "api_name": "mienshao",
+    "species_name": "mienshao"
+  },
+  {
+    "jp_name": "コノヨザル",
+    "api_name": "annihilape",
+    "species_name": "annihilape"
+  },
+  {
+    "jp_name": "コバルオン",
+    "api_name": "cobalion",
+    "species_name": "cobalion"
+  },
+  {
+    "jp_name": "コライドン",
+    "api_name": "koraidon",
+    "species_name": "koraidon"
+  },
+  {
+    "jp_name": "コロトック",
+    "api_name": "kricketune",
+    "species_name": "kricketune"
+  },
+  {
+    "jp_name": "コータス",
+    "api_name": "torkoal",
+    "species_name": "torkoal"
+  },
+  {
+    "jp_name": "ゴウカザル",
+    "api_name": "infernape",
+    "species_name": "infernape"
+  },
+  {
+    "jp_name": "ゴチルゼル",
+    "api_name": "gothitelle",
+    "species_name": "gothitelle"
+  },
+  {
+    "jp_name": "ゴリランダー",
+    "api_name": "rillaboom",
+    "species_name": "rillaboom"
+  },
+  {
+    "jp_name": "ゴルダック",
+    "api_name": "golduck",
+    "species_name": "golduck"
+  },
+  {
+    "jp_name": "ゴルーグ",
+    "api_name": "golurk",
+    "species_name": "golurk"
+  },
+  {
+    "jp_name": "ゴロンダ",
+    "api_name": "pangoro",
+    "species_name": "pangoro"
+  },
+  {
+    "jp_name": "ゴローニャ",
+    "api_name": "golem",
+    "species_name": "golem"
+  },
+  {
+    "jp_name": "ゴーゴート",
+    "api_name": "gogoat",
+    "species_name": "gogoat"
+  },
+  {
+    "jp_name": "サクラビス",
+    "api_name": "gorebyss",
+    "species_name": "gorebyss"
+  },
+  {
+    "jp_name": "サケブシッポ",
+    "api_name": "scream-tail",
+    "species_name": "scream-tail"
+  },
+  {
+    "jp_name": "サザンドラ",
+    "api_name": "hydreigon",
+    "species_name": "hydreigon"
+  },
+  {
+    "jp_name": "サダイジャ",
+    "api_name": "sandaconda",
+    "species_name": "sandaconda"
+  },
+  {
+    "jp_name": "サニゴーン",
+    "api_name": "cursola",
+    "species_name": "cursola"
+  },
+  {
+    "jp_name": "サメハダー",
+    "api_name": "sharpedo",
+    "species_name": "sharpedo"
+  },
+  {
+    "jp_name": "サワムラー",
+    "api_name": "hitmonlee",
+    "species_name": "hitmonlee"
+  },
+  {
+    "jp_name": "サンダー",
+    "api_name": "zapdos",
+    "species_name": "zapdos"
+  },
+  {
+    "jp_name": "サンダース",
+    "api_name": "jolteon",
+    "species_name": "jolteon"
+  },
+  {
+    "jp_name": "サンドパン",
+    "api_name": "sandslash",
+    "species_name": "sandslash"
+  },
+  {
+    "jp_name": "サーナイト",
+    "api_name": "gardevoir",
+    "species_name": "gardevoir"
+  },
+  {
+    "jp_name": "サーフゴー",
+    "api_name": "gholdengo",
+    "species_name": "gholdengo"
+  },
+  {
+    "jp_name": "ザシアン",
+    "api_name": "zacian",
+    "species_name": "zacian"
+  },
+  {
+    "jp_name": "ザマゼンタ",
+    "api_name": "zamazenta",
+    "species_name": "zamazenta"
+  },
+  {
+    "jp_name": "ザルード",
+    "api_name": "zarude",
+    "species_name": "zarude"
+  },
+  {
+    "jp_name": "ザングース",
+    "api_name": "zangoose",
+    "species_name": "zangoose"
+  },
+  {
+    "jp_name": "シェイミ",
+    "api_name": "shaymin-land",
+    "species_name": "shaymin"
+  },
+  {
+    "jp_name": "シザリガー",
+    "api_name": "crawdaunt",
+    "species_name": "crawdaunt"
+  },
+  {
+    "jp_name": "シビルドン",
+    "api_name": "eelektross",
+    "species_name": "eelektross"
+  },
+  {
+    "jp_name": "シャリタツ",
+    "api_name": "tatsugiri-curly",
+    "species_name": "tatsugiri"
+  },
+  {
+    "jp_name": "シャワーズ",
+    "api_name": "vaporeon",
+    "species_name": "vaporeon"
+  },
+  {
+    "jp_name": "シャンデラ",
+    "api_name": "chandelure",
+    "species_name": "chandelure"
+  },
+  {
+    "jp_name": "シュバルゴ",
+    "api_name": "escavalier",
+    "species_name": "escavalier"
+  },
+  {
+    "jp_name": "シルヴァディ",
+    "api_name": "silvally",
+    "species_name": "silvally"
+  },
+  {
+    "jp_name": "シロデスナ",
+    "api_name": "palossand",
+    "species_name": "palossand"
+  },
+  {
+    "jp_name": "シンボラー",
+    "api_name": "sigilyph",
+    "species_name": "sigilyph"
+  },
+  {
+    "jp_name": "ジガルデ",
+    "api_name": "zygarde-50",
+    "species_name": "zygarde"
+  },
+  {
+    "jp_name": "ジジーロン",
+    "api_name": "drampa",
+    "species_name": "drampa"
+  },
+  {
+    "jp_name": "ジバコイル",
+    "api_name": "magnezone",
+    "species_name": "magnezone"
+  },
+  {
+    "jp_name": "ジャラランガ",
+    "api_name": "kommo-o",
+    "species_name": "kommo-o"
+  },
+  {
+    "jp_name": "ジャローダ",
+    "api_name": "serperior",
+    "species_name": "serperior"
+  },
+  {
+    "jp_name": "ジュカイン",
+    "api_name": "sceptile",
+    "species_name": "sceptile"
+  },
+  {
+    "jp_name": "ジュゴン",
+    "api_name": "dewgong",
+    "species_name": "dewgong"
+  },
+  {
+    "jp_name": "ジュナイパー",
+    "api_name": "decidueye",
+    "species_name": "decidueye"
+  },
+  {
+    "jp_name": "ジュペッタ",
+    "api_name": "banette",
+    "species_name": "banette"
+  },
+  {
+    "jp_name": "ジラーチ",
+    "api_name": "jirachi",
+    "species_name": "jirachi"
+  },
+  {
+    "jp_name": "ジーランス",
+    "api_name": "relicanth",
+    "species_name": "relicanth"
+  },
+  {
+    "jp_name": "スイクン",
+    "api_name": "suicune",
+    "species_name": "suicune"
+  },
+  {
+    "jp_name": "スカタンク",
+    "api_name": "skuntank",
+    "species_name": "skuntank"
+  },
+  {
+    "jp_name": "スコヴィラン",
+    "api_name": "scovillain",
+    "species_name": "scovillain"
+  },
+  {
+    "jp_name": "スターミー",
+    "api_name": "starmie",
+    "species_name": "starmie"
+  },
+  {
+    "jp_name": "ストリンダー",
+    "api_name": "toxtricity-amped",
+    "species_name": "toxtricity"
+  },
+  {
+    "jp_name": "スナノケガワ",
+    "api_name": "sandy-shocks",
+    "species_name": "sandy-shocks"
+  },
+  {
+    "jp_name": "スピアー",
+    "api_name": "beedrill",
+    "species_name": "beedrill"
+  },
+  {
+    "jp_name": "スリーパー",
+    "api_name": "hypno",
+    "species_name": "hypno"
+  },
+  {
+    "jp_name": "スワンナ",
+    "api_name": "swanna",
+    "species_name": "swanna"
+  },
+  {
+    "jp_name": "ズガドーン",
+    "api_name": "blacephalon",
+    "species_name": "blacephalon"
+  },
+  {
+    "jp_name": "ズルズキン",
+    "api_name": "scrafty",
+    "species_name": "scrafty"
+  },
+  {
+    "jp_name": "セキタンザン",
+    "api_name": "coalossal",
+    "species_name": "coalossal"
+  },
+  {
+    "jp_name": "セグレイブ",
+    "api_name": "baxcalibur",
+    "species_name": "baxcalibur"
+  },
+  {
+    "jp_name": "セレビィ",
+    "api_name": "celebi",
+    "species_name": "celebi"
+  },
+  {
+    "jp_name": "ゼクロム",
+    "api_name": "zekrom",
+    "species_name": "zekrom"
+  },
+  {
+    "jp_name": "ゼブライカ",
+    "api_name": "zebstrika",
+    "species_name": "zebstrika"
+  },
+  {
+    "jp_name": "ゼラオラ",
+    "api_name": "zeraora",
+    "species_name": "zeraora"
+  },
+  {
+    "jp_name": "ゼルネアス",
+    "api_name": "xerneas",
+    "species_name": "xerneas"
+  },
+  {
+    "jp_name": "ソウブレイズ",
+    "api_name": "ceruledge",
+    "species_name": "ceruledge"
+  },
+  {
+    "jp_name": "ソルガレオ",
+    "api_name": "solgaleo",
+    "species_name": "solgaleo"
+  },
+  {
+    "jp_name": "ソルロック",
+    "api_name": "solrock",
+    "species_name": "solrock"
+  },
+  {
+    "jp_name": "ソーナンス",
+    "api_name": "wobbuffet",
+    "species_name": "wobbuffet"
+  },
+  {
+    "jp_name": "ゾロアーク",
+    "api_name": "zoroark",
+    "species_name": "zoroark"
+  },
+  {
+    "jp_name": "タイカイデン",
+    "api_name": "kilowattrel",
+    "species_name": "kilowattrel"
+  },
+  {
+    "jp_name": "タイレーツ",
+    "api_name": "falinks",
+    "species_name": "falinks"
+  },
+  {
+    "jp_name": "タギングル",
+    "api_name": "grafaiai",
+    "species_name": "grafaiai"
+  },
+  {
+    "jp_name": "タケルライコ",
+    "api_name": "raging-bolt",
+    "species_name": "raging-bolt"
+  },
+  {
+    "jp_name": "タチフサグマ",
+    "api_name": "obstagoon",
+    "species_name": "obstagoon"
+  },
+  {
+    "jp_name": "タブンネ",
+    "api_name": "audino",
+    "species_name": "audino"
+  },
+  {
+    "jp_name": "タルップル",
+    "api_name": "appletun",
+    "species_name": "appletun"
+  },
+  {
+    "jp_name": "ダイオウドウ",
+    "api_name": "copperajah",
+    "species_name": "copperajah"
+  },
+  {
+    "jp_name": "ダイケンキ",
+    "api_name": "samurott",
+    "species_name": "samurott"
+  },
+  {
+    "jp_name": "ダイノーズ",
+    "api_name": "probopass",
+    "species_name": "probopass"
+  },
+  {
+    "jp_name": "ダグトリオ",
+    "api_name": "dugtrio",
+    "species_name": "dugtrio"
+  },
+  {
+    "jp_name": "ダゲキ",
+    "api_name": "sawk",
+    "species_name": "sawk"
+  },
+  {
+    "jp_name": "ダストダス",
+    "api_name": "garbodor",
+    "species_name": "garbodor"
+  },
+  {
+    "jp_name": "ダダリン",
+    "api_name": "dhelmise",
+    "species_name": "dhelmise"
+  },
+  {
+    "jp_name": "ダークライ",
+    "api_name": "darkrai",
+    "species_name": "darkrai"
+  },
+  {
+    "jp_name": "ダーテング",
+    "api_name": "shiftry",
+    "species_name": "shiftry"
+  },
+  {
+    "jp_name": "チェリム",
+    "api_name": "cherrim",
+    "species_name": "cherrim"
+  },
+  {
+    "jp_name": "チオンジェン",
+    "api_name": "wo-chien",
+    "species_name": "wo-chien"
+  },
+  {
+    "jp_name": "チャーレム",
+    "api_name": "medicham",
+    "species_name": "medicham"
+  },
+  {
+    "jp_name": "チラチーノ",
+    "api_name": "cinccino",
+    "species_name": "cinccino"
+  },
+  {
+    "jp_name": "チリーン",
+    "api_name": "chimecho",
+    "species_name": "chimecho"
+  },
+  {
+    "jp_name": "チルタリス",
+    "api_name": "altaria",
+    "species_name": "altaria"
+  },
+  {
+    "jp_name": "チヲハウハネ",
+    "api_name": "slither-wing",
+    "species_name": "slither-wing"
+  },
+  {
+    "jp_name": "ツボツボ",
+    "api_name": "shuckle",
+    "species_name": "shuckle"
+  },
+  {
+    "jp_name": "ツンデツンデ",
+    "api_name": "stakataka",
+    "species_name": "stakataka"
+  },
+  {
+    "jp_name": "ツンベアー",
+    "api_name": "beartic",
+    "species_name": "beartic"
+  },
+  {
+    "jp_name": "テッカグヤ",
+    "api_name": "celesteela",
+    "species_name": "celesteela"
+  },
+  {
+    "jp_name": "テッカニン",
+    "api_name": "ninjask",
+    "species_name": "ninjask"
+  },
+  {
+    "jp_name": "テツノイサハ",
+    "api_name": "iron-leaves",
+    "species_name": "iron-leaves"
+  },
+  {
+    "jp_name": "テツノイバラ",
+    "api_name": "iron-thorns",
+    "species_name": "iron-thorns"
+  },
+  {
+    "jp_name": "テツノイワオ",
+    "api_name": "iron-boulder",
+    "species_name": "iron-boulder"
+  },
+  {
+    "jp_name": "テツノカイナ",
+    "api_name": "iron-hands",
+    "species_name": "iron-hands"
+  },
+  {
+    "jp_name": "テツノカシラ",
+    "api_name": "iron-crown",
+    "species_name": "iron-crown"
+  },
+  {
+    "jp_name": "テツノコウベ",
+    "api_name": "iron-jugulis",
+    "species_name": "iron-jugulis"
+  },
+  {
+    "jp_name": "テツノツツミ",
+    "api_name": "iron-bundle",
+    "species_name": "iron-bundle"
+  },
+  {
+    "jp_name": "テツノドクガ",
+    "api_name": "iron-moth",
+    "species_name": "iron-moth"
+  },
+  {
+    "jp_name": "テツノブジン",
+    "api_name": "iron-valiant",
+    "species_name": "iron-valiant"
+  },
+  {
+    "jp_name": "テツノワダチ",
+    "api_name": "iron-treads",
+    "species_name": "iron-treads"
+  },
+  {
+    "jp_name": "テラキオン",
+    "api_name": "terrakion",
+    "species_name": "terrakion"
+  },
+  {
+    "jp_name": "テラパゴス",
+    "api_name": "terapagos",
+    "species_name": "terapagos"
+  },
+  {
+    "jp_name": "ディアルガ",
+    "api_name": "dialga",
+    "species_name": "dialga"
+  },
+  {
+    "jp_name": "ディアンシー",
+    "api_name": "diancie",
+    "species_name": "diancie"
+  },
+  {
+    "jp_name": "ディンルー",
+    "api_name": "ting-lu",
+    "species_name": "ting-lu"
+  },
+  {
+    "jp_name": "デオキシス",
+    "api_name": "deoxys-normal",
+    "species_name": "deoxys"
+  },
+  {
+    "jp_name": "デカグース",
+    "api_name": "gumshoos",
+    "species_name": "gumshoos"
+  },
+  {
+    "jp_name": "デカヌチャン",
+    "api_name": "tinkaton",
+    "species_name": "tinkaton"
+  },
+  {
+    "jp_name": "デスカーン",
+    "api_name": "cofagrigus",
+    "species_name": "cofagrigus"
+  },
+  {
+    "jp_name": "デスバーン",
+    "api_name": "runerigus",
+    "species_name": "runerigus"
+  },
+  {
+    "jp_name": "デデンネ",
+    "api_name": "dedenne",
+    "species_name": "dedenne"
+  },
+  {
+    "jp_name": "デリバード",
+    "api_name": "delibird",
+    "species_name": "delibird"
+  },
+  {
+    "jp_name": "デンジュモク",
+    "api_name": "xurkitree",
+    "species_name": "xurkitree"
+  },
+  {
+    "jp_name": "デンチュラ",
+    "api_name": "galvantula",
+    "species_name": "galvantula"
+  },
+  {
+    "jp_name": "デンリュウ",
+    "api_name": "ampharos",
+    "species_name": "ampharos"
+  },
+  {
+    "jp_name": "トゲキッス",
+    "api_name": "togekiss",
+    "species_name": "togekiss"
+  },
+  {
+    "jp_name": "トゲデマル",
+    "api_name": "togedemaru",
+    "species_name": "togedemaru"
+  },
+  {
+    "jp_name": "トドゼルガ",
+    "api_name": "walrein",
+    "species_name": "walrein"
+  },
+  {
+    "jp_name": "トドロクツキ",
+    "api_name": "roaring-moon",
+    "species_name": "roaring-moon"
+  },
+  {
+    "jp_name": "トリデプス",
+    "api_name": "bastiodon",
+    "species_name": "bastiodon"
+  },
+  {
+    "jp_name": "トリトドン",
+    "api_name": "gastrodon",
+    "species_name": "gastrodon"
+  },
+  {
+    "jp_name": "トリミアン",
+    "api_name": "furfrou",
+    "species_name": "furfrou"
+  },
+  {
+    "jp_name": "トルネロス",
+    "api_name": "tornadus-incarnate",
+    "species_name": "tornadus"
+  },
+  {
+    "jp_name": "トロピウス",
+    "api_name": "tropius",
+    "species_name": "tropius"
+  },
+  {
+    "jp_name": "ドオー",
+    "api_name": "clodsire",
+    "species_name": "clodsire"
+  },
+  {
+    "jp_name": "ドククラゲ",
+    "api_name": "tentacruel",
+    "species_name": "tentacruel"
+  },
+  {
+    "jp_name": "ドクケイル",
+    "api_name": "dustox",
+    "species_name": "dustox"
+  },
+  {
+    "jp_name": "ドクロッグ",
+    "api_name": "toxicroak",
+    "species_name": "toxicroak"
+  },
+  {
+    "jp_name": "ドサイドン",
+    "api_name": "rhyperior",
+    "species_name": "rhyperior"
+  },
+  {
+    "jp_name": "ドダイトス",
+    "api_name": "torterra",
+    "species_name": "torterra"
+  },
+  {
+    "jp_name": "ドデカバシ",
+    "api_name": "toucannon",
+    "species_name": "toucannon"
+  },
+  {
+    "jp_name": "ドドゲザン",
+    "api_name": "kingambit",
+    "species_name": "kingambit"
+  },
+  {
+    "jp_name": "ドヒドイデ",
+    "api_name": "toxapex",
+    "species_name": "toxapex"
+  },
+  {
+    "jp_name": "ドラパルト",
+    "api_name": "dragapult",
+    "species_name": "dragapult"
+  },
+  {
+    "jp_name": "ドラピオン",
+    "api_name": "drapion",
+    "species_name": "drapion"
+  },
+  {
+    "jp_name": "ドラミドロ",
+    "api_name": "dragalge",
+    "species_name": "dragalge"
+  },
+  {
+    "jp_name": "ドリュウズ",
+    "api_name": "excadrill",
+    "species_name": "excadrill"
+  },
+  {
+    "jp_name": "ドレディア",
+    "api_name": "lilligant",
+    "species_name": "lilligant"
+  },
+  {
+    "jp_name": "ドンカラス",
+    "api_name": "honchkrow",
+    "species_name": "honchkrow"
+  },
+  {
+    "jp_name": "ドンファン",
+    "api_name": "donphan",
+    "species_name": "donphan"
+  },
+  {
+    "jp_name": "ドータクン",
+    "api_name": "bronzong",
+    "species_name": "bronzong"
+  },
+  {
+    "jp_name": "ドードリオ",
+    "api_name": "dodrio",
+    "species_name": "dodrio"
+  },
+  {
+    "jp_name": "ドーブル",
+    "api_name": "smeargle",
+    "species_name": "smeargle"
+  },
+  {
+    "jp_name": "ナゲキ",
+    "api_name": "throh",
+    "species_name": "throh"
+  },
+  {
+    "jp_name": "ナゲツケサル",
+    "api_name": "passimian",
+    "species_name": "passimian"
+  },
+  {
+    "jp_name": "ナッシー",
+    "api_name": "exeggutor",
+    "species_name": "exeggutor"
+  },
+  {
+    "jp_name": "ナットレイ",
+    "api_name": "ferrothorn",
+    "species_name": "ferrothorn"
+  },
+  {
+    "jp_name": "ナマコブシ",
+    "api_name": "pyukumuku",
+    "species_name": "pyukumuku"
+  },
+  {
+    "jp_name": "ナマズン",
+    "api_name": "whiscash",
+    "species_name": "whiscash"
+  },
+  {
+    "jp_name": "ニドキング",
+    "api_name": "nidoking",
+    "species_name": "nidoking"
+  },
+  {
+    "jp_name": "ニドクイン",
+    "api_name": "nidoqueen",
+    "species_name": "nidoqueen"
+  },
+  {
+    "jp_name": "ニャイキング",
+    "api_name": "perrserker",
+    "species_name": "perrserker"
+  },
+  {
+    "jp_name": "ニャオニクス",
+    "api_name": "meowstic-male",
+    "species_name": "meowstic"
+  },
+  {
+    "jp_name": "ニョロトノ",
+    "api_name": "politoed",
+    "species_name": "politoed"
+  },
+  {
+    "jp_name": "ニョロボン",
+    "api_name": "poliwrath",
+    "species_name": "poliwrath"
+  },
+  {
+    "jp_name": "ニンフィア",
+    "api_name": "sylveon",
+    "species_name": "sylveon"
+  },
+  {
+    "jp_name": "ヌオー",
+    "api_name": "quagsire",
+    "species_name": "quagsire"
+  },
+  {
+    "jp_name": "ヌケニン",
+    "api_name": "shedinja",
+    "species_name": "shedinja"
+  },
+  {
+    "jp_name": "ヌメルゴン",
+    "api_name": "goodra",
+    "species_name": "goodra"
+  },
+  {
+    "jp_name": "ネイティオ",
+    "api_name": "xatu",
+    "species_name": "xatu"
+  },
+  {
+    "jp_name": "ネオラント",
+    "api_name": "lumineon",
+    "species_name": "lumineon"
+  },
+  {
+    "jp_name": "ネギガナイト",
+    "api_name": "sirfetchd",
+    "species_name": "sirfetchd"
+  },
+  {
+    "jp_name": "ネクロズマ",
+    "api_name": "necrozma",
+    "species_name": "necrozma"
+  },
+  {
+    "jp_name": "ネッコアラ",
+    "api_name": "komala",
+    "species_name": "komala"
+  },
+  {
+    "jp_name": "ネンドール",
+    "api_name": "claydol",
+    "species_name": "claydol"
+  },
+  {
+    "jp_name": "ノクタス",
+    "api_name": "cacturne",
+    "species_name": "cacturne"
+  },
+  {
+    "jp_name": "ノココッチ",
+    "api_name": "dudunsparce-two-segment",
+    "species_name": "dudunsparce"
+  },
+  {
+    "jp_name": "ハカドッグ",
+    "api_name": "houndstone",
+    "species_name": "houndstone"
+  },
+  {
+    "jp_name": "ハガネール",
+    "api_name": "steelix",
+    "species_name": "steelix"
+  },
+  {
+    "jp_name": "ハギギシリ",
+    "api_name": "bruxish",
+    "species_name": "bruxish"
+  },
+  {
+    "jp_name": "ハッサム",
+    "api_name": "scizor",
+    "species_name": "scizor"
+  },
+  {
+    "jp_name": "ハハコモリ",
+    "api_name": "leavanny",
+    "species_name": "leavanny"
+  },
+  {
+    "jp_name": "ハバタクカミ",
+    "api_name": "flutter-mane",
+    "species_name": "flutter-mane"
+  },
+  {
+    "jp_name": "ハピナス",
+    "api_name": "blissey",
+    "species_name": "blissey"
+  },
+  {
+    "jp_name": "ハブネーク",
+    "api_name": "seviper",
+    "species_name": "seviper"
+  },
+  {
+    "jp_name": "ハラバリー",
+    "api_name": "bellibolt",
+    "species_name": "bellibolt"
+  },
+  {
+    "jp_name": "ハリテヤマ",
+    "api_name": "hariyama",
+    "species_name": "hariyama"
+  },
+  {
+    "jp_name": "ハリーマン",
+    "api_name": "overqwil",
+    "species_name": "overqwil"
+  },
+  {
+    "jp_name": "ハルクジラ",
+    "api_name": "cetitan",
+    "species_name": "cetitan"
+  },
+  {
+    "jp_name": "ハンテール",
+    "api_name": "huntail",
+    "species_name": "huntail"
+  },
+  {
+    "jp_name": "バイウールー",
+    "api_name": "dubwool",
+    "species_name": "dubwool"
+  },
+  {
+    "jp_name": "バイバニラ",
+    "api_name": "vanilluxe",
+    "species_name": "vanilluxe"
+  },
+  {
+    "jp_name": "バウッツェル",
+    "api_name": "dachsbun",
+    "species_name": "dachsbun"
+  },
+  {
+    "jp_name": "バオッキー",
+    "api_name": "simisear",
+    "species_name": "simisear"
+  },
+  {
+    "jp_name": "バクオング",
+    "api_name": "exploud",
+    "species_name": "exploud"
+  },
+  {
+    "jp_name": "バクガメス",
+    "api_name": "turtonator",
+    "species_name": "turtonator"
+  },
+  {
+    "jp_name": "バクフーン",
+    "api_name": "typhlosion",
+    "species_name": "typhlosion"
+  },
+  {
+    "jp_name": "バクーダ",
+    "api_name": "camerupt",
+    "species_name": "camerupt"
+  },
+  {
+    "jp_name": "バサギリ",
+    "api_name": "kleavor",
+    "species_name": "kleavor"
+  },
+  {
+    "jp_name": "バシャーモ",
+    "api_name": "blaziken",
+    "species_name": "blaziken"
+  },
+  {
+    "jp_name": "バタフリー",
+    "api_name": "butterfree",
+    "species_name": "butterfree"
+  },
+  {
+    "jp_name": "バチンウニ",
+    "api_name": "pincurchin",
+    "species_name": "pincurchin"
+  },
+  {
+    "jp_name": "バッフロン",
+    "api_name": "bouffalant",
+    "species_name": "bouffalant"
+  },
+  {
+    "jp_name": "バドレックス",
+    "api_name": "calyrex",
+    "species_name": "calyrex"
+  },
+  {
+    "jp_name": "バリコオル",
+    "api_name": "mr-rime",
+    "species_name": "mr-rime"
+  },
+  {
+    "jp_name": "バルジーナ",
+    "api_name": "mandibuzz",
+    "species_name": "mandibuzz"
+  },
+  {
+    "jp_name": "バルビート",
+    "api_name": "volbeat",
+    "species_name": "volbeat"
+  },
+  {
+    "jp_name": "バンギラス",
+    "api_name": "tyranitar",
+    "species_name": "tyranitar"
+  },
+  {
+    "jp_name": "バンバドロ",
+    "api_name": "mudsdale",
+    "species_name": "mudsdale"
+  },
+  {
+    "jp_name": "パオジアン",
+    "api_name": "chien-pao",
+    "species_name": "chien-pao"
+  },
+  {
+    "jp_name": "パチリス",
+    "api_name": "pachirisu",
+    "species_name": "pachirisu"
+  },
+  {
+    "jp_name": "パッチラゴン",
+    "api_name": "dracozolt",
+    "species_name": "dracozolt"
+  },
+  {
+    "jp_name": "パッチルドン",
+    "api_name": "arctozolt",
+    "species_name": "arctozolt"
+  },
+  {
+    "jp_name": "パッチール",
+    "api_name": "spinda",
+    "species_name": "spinda"
+  },
+  {
+    "jp_name": "パフュートン",
+    "api_name": "oinkologne-male",
+    "species_name": "oinkologne"
+  },
+  {
+    "jp_name": "パラセクト",
+    "api_name": "parasect",
+    "species_name": "parasect"
+  },
+  {
+    "jp_name": "パルキア",
+    "api_name": "palkia",
+    "species_name": "palkia"
+  },
+  {
+    "jp_name": "パルシェン",
+    "api_name": "cloyster",
+    "species_name": "cloyster"
+  },
+  {
+    "jp_name": "パルスワン",
+    "api_name": "boltund",
+    "species_name": "boltund"
+  },
+  {
+    "jp_name": "パンプジン",
+    "api_name": "gourgeist-average",
+    "species_name": "gourgeist"
+  },
+  {
+    "jp_name": "パーモット",
+    "api_name": "pawmot",
+    "species_name": "pawmot"
+  },
+  {
+    "jp_name": "ヒヒダルマ",
+    "api_name": "darmanitan-standard",
+    "species_name": "darmanitan"
+  },
+  {
+    "jp_name": "ヒヤッキー",
+    "api_name": "simipour",
+    "species_name": "simipour"
+  },
+  {
+    "jp_name": "ヒードラン",
+    "api_name": "heatran",
+    "species_name": "heatran"
+  },
+  {
+    "jp_name": "ビクティニ",
+    "api_name": "victini",
+    "species_name": "victini"
+  },
+  {
+    "jp_name": "ビビヨン",
+    "api_name": "vivillon",
+    "species_name": "vivillon"
+  },
+  {
+    "jp_name": "ビリジオン",
+    "api_name": "virizion",
+    "species_name": "virizion"
+  },
+  {
+    "jp_name": "ビークイン",
+    "api_name": "vespiquen",
+    "species_name": "vespiquen"
+  },
+  {
+    "jp_name": "ビーダル",
+    "api_name": "bibarel",
+    "species_name": "bibarel"
+  },
+  {
+    "jp_name": "ピクシー",
+    "api_name": "clefable",
+    "species_name": "clefable"
+  },
+  {
+    "jp_name": "ピジョット",
+    "api_name": "pidgeot",
+    "species_name": "pidgeot"
+  },
+  {
+    "jp_name": "ファイアロー",
+    "api_name": "talonflame",
+    "species_name": "talonflame"
+  },
+  {
+    "jp_name": "ファイヤー",
+    "api_name": "moltres",
+    "species_name": "moltres"
+  },
+  {
+    "jp_name": "フェローチェ",
+    "api_name": "pheromosa",
+    "species_name": "pheromosa"
+  },
+  {
+    "jp_name": "フォクスライ",
+    "api_name": "thievul",
+    "species_name": "thievul"
+  },
+  {
+    "jp_name": "フォレトス",
+    "api_name": "forretress",
+    "species_name": "forretress"
+  },
+  {
+    "jp_name": "フシギバナ",
+    "api_name": "venusaur",
+    "species_name": "venusaur"
+  },
+  {
+    "jp_name": "フライゴン",
+    "api_name": "flygon",
+    "species_name": "flygon"
+  },
+  {
+    "jp_name": "フラージェス",
+    "api_name": "florges",
+    "species_name": "florges"
+  },
+  {
+    "jp_name": "フリーザー",
+    "api_name": "articuno",
+    "species_name": "articuno"
+  },
+  {
+    "jp_name": "フリージオ",
+    "api_name": "cryogonal",
+    "species_name": "cryogonal"
+  },
+  {
+    "jp_name": "フレフワン",
+    "api_name": "aromatisse",
+    "species_name": "aromatisse"
+  },
+  {
+    "jp_name": "フローゼル",
+    "api_name": "floatzel",
+    "species_name": "floatzel"
+  },
+  {
+    "jp_name": "フワライド",
+    "api_name": "drifblim",
+    "species_name": "drifblim"
+  },
+  {
+    "jp_name": "フーディン",
+    "api_name": "alakazam",
+    "species_name": "alakazam"
+  },
+  {
+    "jp_name": "フーパ",
+    "api_name": "hoopa",
+    "species_name": "hoopa"
+  },
+  {
+    "jp_name": "ブニャット",
+    "api_name": "purugly",
+    "species_name": "purugly"
+  },
+  {
+    "jp_name": "ブラッキー",
+    "api_name": "umbreon",
+    "species_name": "umbreon"
+  },
+  {
+    "jp_name": "ブリガロン",
+    "api_name": "chesnaught",
+    "species_name": "chesnaught"
+  },
+  {
+    "jp_name": "ブリザポス",
+    "api_name": "glastrier",
+    "species_name": "glastrier"
+  },
+  {
+    "jp_name": "ブリジュラス",
+    "api_name": "archaludon",
+    "species_name": "archaludon"
+  },
+  {
+    "jp_name": "ブリムオン",
+    "api_name": "hatterene",
+    "species_name": "hatterene"
+  },
+  {
+    "jp_name": "ブルンゲル",
+    "api_name": "jellicent-male",
+    "species_name": "jellicent"
+  },
+  {
+    "jp_name": "ブロスター",
+    "api_name": "clawitzer",
+    "species_name": "clawitzer"
+  },
+  {
+    "jp_name": "ブロロローム",
+    "api_name": "revavroom",
+    "species_name": "revavroom"
+  },
+  {
+    "jp_name": "ブースター",
+    "api_name": "flareon",
+    "species_name": "flareon"
+  },
+  {
+    "jp_name": "ブーバーン",
+    "api_name": "magmortar",
+    "species_name": "magmortar"
+  },
+  {
+    "jp_name": "ブーピッグ",
+    "api_name": "grumpig",
+    "species_name": "grumpig"
+  },
+  {
+    "jp_name": "プクリン",
+    "api_name": "wigglytuff",
+    "species_name": "wigglytuff"
+  },
+  {
+    "jp_name": "プテラ",
+    "api_name": "aerodactyl",
+    "species_name": "aerodactyl"
+  },
+  {
+    "jp_name": "プラスル",
+    "api_name": "plusle",
+    "species_name": "plusle"
+  },
+  {
+    "jp_name": "ヘイラッシャ",
+    "api_name": "dondozo",
+    "species_name": "dondozo"
+  },
+  {
+    "jp_name": "ヘラクロス",
+    "api_name": "heracross",
+    "species_name": "heracross"
+  },
+  {
+    "jp_name": "ヘルガー",
+    "api_name": "houndoom",
+    "species_name": "houndoom"
+  },
+  {
+    "jp_name": "ベトベトン",
+    "api_name": "muk",
+    "species_name": "muk"
+  },
+  {
+    "jp_name": "ベラカス",
+    "api_name": "rabsca",
+    "species_name": "rabsca"
+  },
+  {
+    "jp_name": "ベロベルト",
+    "api_name": "lickilicky",
+    "species_name": "lickilicky"
+  },
+  {
+    "jp_name": "ペラップ",
+    "api_name": "chatot",
+    "species_name": "chatot"
+  },
+  {
+    "jp_name": "ペリッパー",
+    "api_name": "pelipper",
+    "species_name": "pelipper"
+  },
+  {
+    "jp_name": "ペルシアン",
+    "api_name": "persian",
+    "species_name": "persian"
+  },
+  {
+    "jp_name": "ペロリーム",
+    "api_name": "slurpuff",
+    "species_name": "slurpuff"
+  },
+  {
+    "jp_name": "ペンドラー",
+    "api_name": "scolipede",
+    "species_name": "scolipede"
+  },
+  {
+    "jp_name": "ホウオウ",
+    "api_name": "ho-oh",
+    "species_name": "ho-oh"
+  },
+  {
+    "jp_name": "ホエルオー",
+    "api_name": "wailord",
+    "species_name": "wailord"
+  },
+  {
+    "jp_name": "ホルード",
+    "api_name": "diggersby",
+    "species_name": "diggersby"
+  },
+  {
+    "jp_name": "ボスゴドラ",
+    "api_name": "aggron",
+    "species_name": "aggron"
+  },
+  {
+    "jp_name": "ボルケニオン",
+    "api_name": "volcanion",
+    "species_name": "volcanion"
+  },
+  {
+    "jp_name": "ボルトロス",
+    "api_name": "thundurus-incarnate",
+    "species_name": "thundurus"
+  },
+  {
+    "jp_name": "ボーマンダ",
+    "api_name": "salamence",
+    "species_name": "salamence"
+  },
+  {
+    "jp_name": "ポットデス",
+    "api_name": "polteageist",
+    "species_name": "polteageist"
+  },
+  {
+    "jp_name": "ポリゴンＺ",
+    "api_name": "porygon-z",
+    "species_name": "porygon-z"
+  },
+  {
+    "jp_name": "ポワルン",
+    "api_name": "castform",
+    "species_name": "castform"
+  },
+  {
+    "jp_name": "マイナン",
+    "api_name": "minun",
+    "species_name": "minun"
+  },
+  {
+    "jp_name": "マギアナ",
+    "api_name": "magearna",
+    "species_name": "magearna"
+  },
+  {
+    "jp_name": "マグカルゴ",
+    "api_name": "magcargo",
+    "species_name": "magcargo"
+  },
+  {
+    "jp_name": "マシェード",
+    "api_name": "shiinotic",
+    "species_name": "shiinotic"
+  },
+  {
+    "jp_name": "マシマシラ",
+    "api_name": "munkidori",
+    "species_name": "munkidori"
+  },
+  {
+    "jp_name": "マスカーニャ",
+    "api_name": "meowscarada",
+    "species_name": "meowscarada"
+  },
+  {
+    "jp_name": "マスキッパ",
+    "api_name": "carnivine",
+    "species_name": "carnivine"
+  },
+  {
+    "jp_name": "マタドガス",
+    "api_name": "weezing",
+    "species_name": "weezing"
+  },
+  {
+    "jp_name": "マッギョ",
+    "api_name": "stunfisk",
+    "species_name": "stunfisk"
+  },
+  {
+    "jp_name": "マッシブーン",
+    "api_name": "buzzwole",
+    "species_name": "buzzwole"
+  },
+  {
+    "jp_name": "マナフィ",
+    "api_name": "manaphy",
+    "species_name": "manaphy"
+  },
+  {
+    "jp_name": "マニューラ",
+    "api_name": "weavile",
+    "species_name": "weavile"
+  },
+  {
+    "jp_name": "マフィティフ",
+    "api_name": "mabosstiff",
+    "species_name": "mabosstiff"
+  },
+  {
+    "jp_name": "マフォクシー",
+    "api_name": "delphox",
+    "species_name": "delphox"
+  },
+  {
+    "jp_name": "マホイップ",
+    "api_name": "alcremie",
+    "species_name": "alcremie"
+  },
+  {
+    "jp_name": "ママンボウ",
+    "api_name": "alomomola",
+    "species_name": "alomomola"
+  },
+  {
+    "jp_name": "マラカッチ",
+    "api_name": "maractus",
+    "species_name": "maractus"
+  },
+  {
+    "jp_name": "マリルリ",
+    "api_name": "azumarill",
+    "species_name": "azumarill"
+  },
+  {
+    "jp_name": "マルノーム",
+    "api_name": "swalot",
+    "species_name": "swalot"
+  },
+  {
+    "jp_name": "マルマイン",
+    "api_name": "electrode",
+    "species_name": "electrode"
+  },
+  {
+    "jp_name": "マルヤクデ",
+    "api_name": "centiskorch",
+    "species_name": "centiskorch"
+  },
+  {
+    "jp_name": "マンタイン",
+    "api_name": "mantine",
+    "species_name": "mantine"
+  },
+  {
+    "jp_name": "マンムー",
+    "api_name": "mamoswine",
+    "species_name": "mamoswine"
+  },
+  {
+    "jp_name": "マーシャドー",
+    "api_name": "marshadow",
+    "species_name": "marshadow"
+  },
+  {
+    "jp_name": "ミカルゲ",
+    "api_name": "spiritomb",
+    "species_name": "spiritomb"
+  },
+  {
+    "jp_name": "ミガルーサ",
+    "api_name": "veluza",
+    "species_name": "veluza"
+  },
+  {
+    "jp_name": "ミノマダム",
+    "api_name": "wormadam-plant",
+    "species_name": "wormadam"
+  },
+  {
+    "jp_name": "ミミズズ",
+    "api_name": "orthworm",
+    "species_name": "orthworm"
+  },
+  {
+    "jp_name": "ミミッキュ",
+    "api_name": "mimikyu-disguised",
+    "species_name": "mimikyu"
+  },
+  {
+    "jp_name": "ミミロップ",
+    "api_name": "lopunny",
+    "species_name": "lopunny"
+  },
+  {
+    "jp_name": "ミュウ",
+    "api_name": "mew",
+    "species_name": "mew"
+  },
+  {
+    "jp_name": "ミュウツー",
+    "api_name": "mewtwo",
+    "species_name": "mewtwo"
+  },
+  {
+    "jp_name": "ミライドン",
+    "api_name": "miraidon",
+    "species_name": "miraidon"
+  },
+  {
+    "jp_name": "ミルタンク",
+    "api_name": "miltank",
+    "species_name": "miltank"
+  },
+  {
+    "jp_name": "ミルホッグ",
+    "api_name": "watchog",
+    "species_name": "watchog"
+  },
+  {
+    "jp_name": "ミロカロス",
+    "api_name": "milotic",
+    "species_name": "milotic"
+  },
+  {
+    "jp_name": "ムウマージ",
+    "api_name": "mismagius",
+    "species_name": "mismagius"
+  },
+  {
+    "jp_name": "ムクホーク",
+    "api_name": "staraptor",
+    "species_name": "staraptor"
+  },
+  {
+    "jp_name": "ムゲンダイナ",
+    "api_name": "eternatus",
+    "species_name": "eternatus"
+  },
+  {
+    "jp_name": "ムシャーナ",
+    "api_name": "musharna",
+    "species_name": "musharna"
+  },
+  {
+    "jp_name": "ムーランド",
+    "api_name": "stoutland",
+    "species_name": "stoutland"
+  },
+  {
+    "jp_name": "メガニウム",
+    "api_name": "meganium",
+    "species_name": "meganium"
+  },
+  {
+    "jp_name": "メガヤンマ",
+    "api_name": "yanmega",
+    "species_name": "yanmega"
+  },
+  {
+    "jp_name": "メタグロス",
+    "api_name": "metagross",
+    "species_name": "metagross"
+  },
+  {
+    "jp_name": "メタモン",
+    "api_name": "ditto",
+    "species_name": "ditto"
+  },
+  {
+    "jp_name": "メテノ",
+    "api_name": "minior-red-meteor",
+    "species_name": "minior"
+  },
+  {
+    "jp_name": "メブキジカ",
+    "api_name": "sawsbuck",
+    "species_name": "sawsbuck"
+  },
+  {
+    "jp_name": "メルタン",
+    "api_name": "meltan",
+    "species_name": "meltan"
+  },
+  {
+    "jp_name": "メルメタル",
+    "api_name": "melmetal",
+    "species_name": "melmetal"
+  },
+  {
+    "jp_name": "メレシー",
+    "api_name": "carbink",
+    "species_name": "carbink"
+  },
+  {
+    "jp_name": "メロエッタ",
+    "api_name": "meloetta-aria",
+    "species_name": "meloetta"
+  },
+  {
+    "jp_name": "モジャンボ",
+    "api_name": "tangrowth",
+    "species_name": "tangrowth"
+  },
+  {
+    "jp_name": "モスノウ",
+    "api_name": "frosmoth",
+    "species_name": "frosmoth"
+  },
+  {
+    "jp_name": "モトトカゲ",
+    "api_name": "cyclizar",
+    "species_name": "cyclizar"
+  },
+  {
+    "jp_name": "モモワロウ",
+    "api_name": "pecharunt",
+    "species_name": "pecharunt"
+  },
+  {
+    "jp_name": "モルフォン",
+    "api_name": "venomoth",
+    "species_name": "venomoth"
+  },
+  {
+    "jp_name": "モルペコ",
+    "api_name": "morpeko-full-belly",
+    "species_name": "morpeko"
+  },
+  {
+    "jp_name": "モロバレル",
+    "api_name": "amoonguss",
+    "species_name": "amoonguss"
+  },
+  {
+    "jp_name": "ヤドキング",
+    "api_name": "slowking",
+    "species_name": "slowking"
+  },
+  {
+    "jp_name": "ヤドラン",
+    "api_name": "slowbro",
+    "species_name": "slowbro"
+  },
+  {
+    "jp_name": "ヤナッキー",
+    "api_name": "simisage",
+    "species_name": "simisage"
+  },
+  {
+    "jp_name": "ヤバソチャ",
+    "api_name": "sinistcha",
+    "species_name": "sinistcha"
+  },
+  {
+    "jp_name": "ヤミラミ",
+    "api_name": "sableye",
+    "species_name": "sableye"
+  },
+  {
+    "jp_name": "ヤレユータン",
+    "api_name": "oranguru",
+    "species_name": "oranguru"
+  },
+  {
+    "jp_name": "ユキノオー",
+    "api_name": "abomasnow",
+    "species_name": "abomasnow"
+  },
+  {
+    "jp_name": "ユキメノコ",
+    "api_name": "froslass",
+    "species_name": "froslass"
+  },
+  {
+    "jp_name": "ユクシー",
+    "api_name": "uxie",
+    "species_name": "uxie"
+  },
+  {
+    "jp_name": "ユレイドル",
+    "api_name": "cradily",
+    "species_name": "cradily"
+  },
+  {
+    "jp_name": "ヨクバリス",
+    "api_name": "greedent",
+    "species_name": "greedent"
+  },
+  {
+    "jp_name": "ヨノワール",
+    "api_name": "dusknoir",
+    "species_name": "dusknoir"
+  },
+  {
+    "jp_name": "ヨルノズク",
+    "api_name": "noctowl",
+    "species_name": "noctowl"
+  },
+  {
+    "jp_name": "ヨワシ",
+    "api_name": "wishiwashi-solo",
+    "species_name": "wishiwashi"
+  },
+  {
+    "jp_name": "ライコウ",
+    "api_name": "raikou",
+    "species_name": "raikou"
+  },
+  {
+    "jp_name": "ライチュウ",
+    "api_name": "raichu",
+    "species_name": "raichu"
+  },
+  {
+    "jp_name": "ライボルト",
+    "api_name": "manectric",
+    "species_name": "manectric"
+  },
+  {
+    "jp_name": "ラウドボーン",
+    "api_name": "skeledirge",
+    "species_name": "skeledirge"
+  },
+  {
+    "jp_name": "ラグラージ",
+    "api_name": "swampert",
+    "species_name": "swampert"
+  },
+  {
+    "jp_name": "ラッタ",
+    "api_name": "raticate",
+    "species_name": "raticate"
+  },
+  {
+    "jp_name": "ラティアス",
+    "api_name": "latias",
+    "species_name": "latias"
+  },
+  {
+    "jp_name": "ラティオス",
+    "api_name": "latios",
+    "species_name": "latios"
+  },
+  {
+    "jp_name": "ラフレシア",
+    "api_name": "vileplume",
+    "species_name": "vileplume"
+  },
+  {
+    "jp_name": "ラブカス",
+    "api_name": "luvdisc",
+    "species_name": "luvdisc"
+  },
+  {
+    "jp_name": "ラブトロス",
+    "api_name": "enamorus-incarnate",
+    "species_name": "enamorus"
+  },
+  {
+    "jp_name": "ラプラス",
+    "api_name": "lapras",
+    "species_name": "lapras"
+  },
+  {
+    "jp_name": "ラムパルド",
+    "api_name": "rampardos",
+    "species_name": "rampardos"
+  },
+  {
+    "jp_name": "ラランテス",
+    "api_name": "lurantis",
+    "species_name": "lurantis"
+  },
+  {
+    "jp_name": "ランクルス",
+    "api_name": "reuniclus",
+    "species_name": "reuniclus"
+  },
+  {
+    "jp_name": "ランターン",
+    "api_name": "lanturn",
+    "species_name": "lanturn"
+  },
+  {
+    "jp_name": "ランドロス",
+    "api_name": "landorus-incarnate",
+    "species_name": "landorus"
+  },
+  {
+    "jp_name": "リキキリン",
+    "api_name": "farigiraf",
+    "species_name": "farigiraf"
+  },
+  {
+    "jp_name": "リククラゲ",
+    "api_name": "toedscruel",
+    "species_name": "toedscruel"
+  },
+  {
+    "jp_name": "リザードン",
+    "api_name": "charizard",
+    "species_name": "charizard"
+  },
+  {
+    "jp_name": "リーフィア",
+    "api_name": "leafeon",
+    "species_name": "leafeon"
+  },
+  {
+    "jp_name": "ルカリオ",
+    "api_name": "lucario",
+    "species_name": "lucario"
+  },
+  {
+    "jp_name": "ルガルガン",
+    "api_name": "lycanroc-midday",
+    "species_name": "lycanroc"
+  },
+  {
+    "jp_name": "ルギア",
+    "api_name": "lugia",
+    "species_name": "lugia"
+  },
+  {
+    "jp_name": "ルチャブル",
+    "api_name": "hawlucha",
+    "species_name": "hawlucha"
+  },
+  {
+    "jp_name": "ルナアーラ",
+    "api_name": "lunala",
+    "species_name": "lunala"
+  },
+  {
+    "jp_name": "ルナトーン",
+    "api_name": "lunatone",
+    "species_name": "lunatone"
+  },
+  {
+    "jp_name": "ルンパッパ",
+    "api_name": "ludicolo",
+    "species_name": "ludicolo"
+  },
+  {
+    "jp_name": "ルージュラ",
+    "api_name": "jynx",
+    "species_name": "jynx"
+  },
+  {
+    "jp_name": "レイスポス",
+    "api_name": "spectrier",
+    "species_name": "spectrier"
+  },
+  {
+    "jp_name": "レシラム",
+    "api_name": "reshiram",
+    "species_name": "reshiram"
+  },
+  {
+    "jp_name": "レジアイス",
+    "api_name": "regice",
+    "species_name": "regice"
+  },
+  {
+    "jp_name": "レジエレキ",
+    "api_name": "regieleki",
+    "species_name": "regieleki"
+  },
+  {
+    "jp_name": "レジギガス",
+    "api_name": "regigigas",
+    "species_name": "regigigas"
+  },
+  {
+    "jp_name": "レジスチル",
+    "api_name": "registeel",
+    "species_name": "registeel"
+  },
+  {
+    "jp_name": "レジドラゴ",
+    "api_name": "regidrago",
+    "species_name": "regidrago"
+  },
+  {
+    "jp_name": "レジロック",
+    "api_name": "regirock",
+    "species_name": "regirock"
+  },
+  {
+    "jp_name": "レックウザ",
+    "api_name": "rayquaza",
+    "species_name": "rayquaza"
+  },
+  {
+    "jp_name": "レディアン",
+    "api_name": "ledian",
+    "species_name": "ledian"
+  },
+  {
+    "jp_name": "レパルダス",
+    "api_name": "liepard",
+    "species_name": "liepard"
+  },
+  {
+    "jp_name": "レントラー",
+    "api_name": "luxray",
+    "species_name": "luxray"
+  },
+  {
+    "jp_name": "ロズレイド",
+    "api_name": "roserade",
+    "species_name": "roserade"
+  },
+  {
+    "jp_name": "ロトム",
+    "api_name": "rotom",
+    "species_name": "rotom"
+  },
+  {
+    "jp_name": "ローブシン",
+    "api_name": "conkeldurr",
+    "species_name": "conkeldurr"
+  },
+  {
+    "jp_name": "ワタシラガ",
+    "api_name": "eldegoss",
+    "species_name": "eldegoss"
+  },
+  {
+    "jp_name": "ワタッコ",
+    "api_name": "jumpluff",
+    "species_name": "jumpluff"
+  },
+  {
+    "jp_name": "ワナイダー",
+    "api_name": "spidops",
+    "species_name": "spidops"
+  },
+  {
+    "jp_name": "ワルビアル",
+    "api_name": "krookodile",
+    "species_name": "krookodile"
+  }
+]
