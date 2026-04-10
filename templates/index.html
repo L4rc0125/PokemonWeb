@@ -1034,6 +1034,32 @@ body.has-damage-panel{
 }
 </style>
 
+<style id="pc_layout_final_override">
+@media (min-width: 1101px){
+  .wrap{
+    width:calc(100vw - 24px) !important;
+    max-width:1180px !important;
+    min-width:0 !important;
+    padding:12px !important;
+    overflow-x:hidden !important;
+  }
+  .grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr) !important;
+    gap:10px !important;
+    width:100% !important;
+    align-items:start !important;
+  }
+  .card{
+    min-width:0 !important;
+    overflow:hidden !important;
+  }
+  .slot-row{
+    grid-template-columns:repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
