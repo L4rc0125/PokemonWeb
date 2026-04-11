@@ -1492,9 +1492,10 @@ function getTeraStabMultiplier(moveType, baseTypes, teraType, attackerAbility){
   const isOriginalStab = !!attackType && originalTypes.includes(attackType);
   const isTeraMatch = !!attackType && !!tera && attackType === tera;
   const isAdaptability = String(attackerAbility || "").trim() === "てきおうりょく";
+  const isProteanLike = ["へんげんじざい", "変幻自在", "リベロ"].includes(String(attackerAbility || "").trim());
 
   if (!tera){
-    if (!isOriginalStab) return 1;
+    if (!isOriginalStab && !isProteanLike) return 1;
     return isAdaptability ? 2.0 : 1.5;
   }
 

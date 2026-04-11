@@ -122,6 +122,23 @@ class CalculateApiTests(unittest.TestCase):
         self.assertEqual(multiscale["max_damage"], 70)
         self.assertEqual(huge_power["max_damage"], 279)
 
+    def test_protean_like_abilities_gain_stab(self):
+        defender = {
+            "jp_name": "Target",
+            "types": ["normal"],
+            "stats": {"hp": 166, "defense": 115, "special_defense": 120},
+        }
+        move = {"name": "Close Combat", "type": "fighting", "power": 120, "damage_class": "physical"}
+
+        normal = self.post_calculate(defender=defender, move=move).get_json()
+        protean = self.post_calculate(defender=defender, move=move, attacker_ability="protean").get_json()
+        libero = self.post_calculate(defender=defender, move=move, attacker_ability="リベロ").get_json()
+
+        self.assertEqual(normal["stab"], 1.0)
+        self.assertEqual(protean["stab"], 1.5)
+        self.assertEqual(libero["stab"], 1.5)
+        self.assertGreater(protean["max_damage"], normal["max_damage"])
+
     def test_wonder_guard_blocks_non_super_effective_moves(self):
         defender = {
             "jp_name": "Target",

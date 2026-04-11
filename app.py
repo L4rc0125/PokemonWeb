@@ -1554,6 +1554,8 @@ def canonical_ability_key(value: str) -> str:
         "fur_coat": ["fur_coat", "fur-coat", "ファーコート"],
         "ice_scales": ["ice_scales", "ice-scales", "こおりのりんぷん"],
         "adaptability": ["adaptability", "てきおうりょく"],
+        "protean": ["protean", "へんげんじざい", "変幻自在"],
+        "libero": ["libero", "リベロ"],
         "tinted_lens": ["tinted_lens", "tinted-lens", "いろめがね"],
         "sniper": ["sniper", "スナイパー"],
         "multiscale": ["multiscale", "マルチスケイル"],
@@ -1659,6 +1661,8 @@ def calculate_ability_modifiers(
 
     if attacker_key == "adaptability":
         stab = 2.0
+    if attacker_key in {"protean", "libero"}:
+        stab = max(stab, 1.5)
     if attacker_key == "tinted_lens" and 0 < effectiveness < 1:
         final *= 2.0
     if attacker_key == "sniper" and critical:
@@ -1794,7 +1798,8 @@ def calculate():
 
         normalized_attacker_types = [normalize_type_name(t) for t in attacker_types]
         has_stab = normalize_type_name(move_type) in normalized_attacker_types
-        stab = ability_modifiers["stab"] if has_stab and ability_modifiers["stab"] > 1 else 1.5 if has_stab else 1.0
+        protean_like = canonical_ability_key(attacker_ability) in {"protean", "libero"}
+        stab = ability_modifiers["stab"] if ability_modifiers["stab"] > 1 else 1.5 if (has_stab or protean_like) else 1.0
         burn = coerce_bool(payload.get("burn", payload.get("atk_burn", False))) and category == "physical"
         burn_modifier = 0.5 if burn and not critical else 1.0
         critical_modifier = 1.5 if critical else 1.0
