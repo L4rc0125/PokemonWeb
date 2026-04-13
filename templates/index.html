@@ -775,6 +775,39 @@ body.has-damage-panel{
 .calc-mini-check{ display:inline-flex; align-items:center; gap:6px; font-size:14px; color:#dbe6f7; white-space:nowrap; }
 .calc-mini-check input{ width:16px; height:16px; accent-color:#8be9fd; }
 
+.toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+.refresh-tools{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.refresh-btn{
+  height:36px;
+  padding:0 14px;
+  border:none;
+  border-radius:8px;
+  background:#2b3342;
+  color:#dbe6f7;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+}
+.refresh-btn:disabled{
+  opacity:0.7;
+  cursor:default;
+}
+.refresh-text{
+  font-size:14px;
+  color:#aab4c4;
+}
+
 
 </style>
 
@@ -865,6 +898,12 @@ body.has-damage-panel{
 <body>
 
 <div class="wrap">
+<div class="toolbar">
+  <div class="refresh-tools">
+    <button type="button" class="refresh-btn" id="refresh_all_btn">全ポケモン更新</button>
+    <div class="refresh-text" id="refresh_all_text">未実行</div>
+  </div>
+</div>
 <div class="status" id="status" style="display:none;"></div>
 <datalist id="pokemon_name_options">
   {% for pokemon in pokemon_options %}
@@ -1328,6 +1367,78 @@ async function resolvePokemonDetail(name){
     }
   }
   return null;
+}
+
+let refreshPollTimer = null;
+
+function updateRefreshUi(data){
+  const btn = el("refresh_all_btn");
+  const text = el("refresh_all_text");
+  if (!btn || !text) return;
+
+  const running = !!(data && data.running);
+  const done = Number((data && data.done) || 0);
+  const total = Number((data && data.total) || 0);
+  const message = String((data && data.message) || "").trim();
+  const error = String((data && data.error) || "").trim();
+
+  btn.disabled = running;
+  btn.textContent = running ? "更新中..." : "全ポケモン更新";
+
+  if (error) {
+    text.textContent = error;
+    return;
+  }
+  if (running) {
+    text.textContent = total > 0 ? `${message} (${done}/${total})` : message || "更新中...";
+    return;
+  }
+  if (message) {
+    text.textContent = message;
+    return;
+  }
+  text.textContent = "未実行";
+}
+
+async function fetchRefreshStatus(){
+  try {
+    const res = await fetch("/api/refresh-all-status", {cache:"no-store"});
+    const data = await res.json();
+    updateRefreshUi(data);
+    return data;
+  } catch (e) {
+    updateRefreshUi({error: "更新状態の取得に失敗しました"});
+    return null;
+  }
+}
+
+function startRefreshPolling(){
+  if (refreshPollTimer) return;
+  refreshPollTimer = setInterval(async () => {
+    const data = await fetchRefreshStatus();
+    if (data && !data.running) {
+      clearInterval(refreshPollTimer);
+      refreshPollTimer = null;
+    }
+  }, 1500);
+}
+
+async function refreshAllPokemon(){
+  const btn = el("refresh_all_btn");
+  if (btn) btn.disabled = true;
+  updateRefreshUi({running:true, message:"更新を開始します"});
+  try {
+    const res = await fetch("/api/refresh-all", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: "{}"
+    });
+    const data = await res.json();
+    updateRefreshUi(data);
+    if (data && data.running) startRefreshPolling();
+  } catch (e) {
+    updateRefreshUi({error: "更新開始に失敗しました"});
+  }
 }
 
 async function waitList(){
@@ -3987,6 +4098,14 @@ function bindSlotUi(){
 
 
 async function init(){
+  const initialRefreshState = await fetchRefreshStatus();
+  if (initialRefreshState && initialRefreshState.running){
+    startRefreshPolling();
+  }
+  const refreshBtn = el("refresh_all_btn");
+  if (refreshBtn){
+    refreshBtn.addEventListener("click", refreshAllPokemon);
+  }
   pokemonList = await waitList();
   el("status").textContent = `準備完了（${pokemonList.length}件）`;
 

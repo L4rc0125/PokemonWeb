@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 
 import app
 
@@ -159,6 +160,42 @@ class CalculateApiTests(unittest.TestCase):
         self.assertEqual(neutral["modifiers"]["ability_final"], 0.0)
         self.assertGreater(super_effective["max_damage"], 0)
         self.assertEqual(super_effective["effectiveness"], 2.0)
+
+    def test_refresh_all_status_endpoint(self):
+        with patch.object(app, "get_refresh_state", return_value={
+            "running": True,
+            "total": 10,
+            "done": 3,
+            "error": "",
+            "message": "updating",
+            "started_at": 1.0,
+            "finished_at": 0.0,
+        }):
+            response = self.client.get("/api/refresh-all-status?key=" + app.ACCESS_KEY)
+        self.assertEqual(response.status_code, 200)
+        data = response.get_json()
+        self.assertTrue(data["running"])
+        self.assertEqual(data["done"], 3)
+
+    def test_refresh_all_start_endpoint(self):
+        with patch.object(app, "start_refresh_all_pokemon_details", return_value=True), patch.object(
+            app,
+            "get_refresh_state",
+            return_value={
+                "running": True,
+                "total": 0,
+                "done": 0,
+                "error": "",
+                "message": "started",
+                "started_at": 1.0,
+                "finished_at": 0.0,
+            },
+        ):
+            response = self.client.post("/api/refresh-all?key=" + app.ACCESS_KEY)
+        self.assertEqual(response.status_code, 202)
+        data = response.get_json()
+        self.assertTrue(data["running"])
+        self.assertEqual(data["message"], "started")
 
 
 if __name__ == "__main__":

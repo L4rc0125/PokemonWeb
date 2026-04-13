@@ -57,6 +57,17 @@ state = {
     "message": "初期化待機中",
 }
 
+refresh_lock = threading.Lock()
+refresh_state = {
+    "running": False,
+    "total": 0,
+    "done": 0,
+    "error": "",
+    "message": "",
+    "started_at": 0.0,
+    "finished_at": 0.0,
+}
+
 all_species_index: list[dict] = []
 pokemon_index: list[dict] = []
 detail_cache: dict[str, dict] = {}
@@ -406,6 +417,16 @@ def pick_japanese_name(name_entries: list[dict]) -> str:
 def set_state(**kwargs) -> None:
     with state_lock:
         state.update(kwargs)
+
+
+def set_refresh_state(**kwargs) -> None:
+    with refresh_lock:
+        refresh_state.update(kwargs)
+
+
+def get_refresh_state() -> dict:
+    with refresh_lock:
+        return dict(refresh_state)
 
 
 def register_name_alias(mapping: dict[str, str], alias: str, api_name: str) -> None:
@@ -940,9 +961,9 @@ def resolve_api_name_from_query(jp_name: str) -> str:
     return default_api_name
 
 
-def build_pokemon_detail(api_name: str, jp_name: str) -> dict:
+def build_pokemon_detail(api_name: str, jp_name: str, *, force_refresh: bool = False) -> dict:
     cached = detail_cache.get(api_name)
-    if isinstance(cached, dict) and cached.get("moves") and cached.get("abilities"):
+    if (not force_refresh) and isinstance(cached, dict) and cached.get("moves") and cached.get("abilities"):
         cached = apply_special_form_overrides(api_name, dict(cached))
         cached = apply_special_form_abilities(api_name, cached)
         detail_cache[api_name] = cached
@@ -1051,6 +1072,87 @@ def build_pokemon_detail(api_name: str, jp_name: str) -> dict:
     return detail
 
 
+def refresh_all_pokemon_details() -> None:
+    if not pokemon_index:
+        if not all_species_index:
+            build_all_species_index()
+        build_final_index()
+
+    targets = [
+        {
+            "jp_name": str(item.get("jp_name") or "").strip(),
+            "api_name": str(item.get("api_name") or "").strip(),
+        }
+        for item in pokemon_index
+        if str(item.get("jp_name") or "").strip() and str(item.get("api_name") or "").strip()
+    ]
+
+    total = len(targets)
+    set_refresh_state(
+        running=True,
+        total=total,
+        done=0,
+        error="",
+        message="PokeAPI から再取得中",
+        started_at=time.time(),
+        finished_at=0.0,
+    )
+
+    try:
+        for idx, item in enumerate(targets, start=1):
+            build_pokemon_detail(item["api_name"], item["jp_name"], force_refresh=True)
+            set_refresh_state(
+                running=True,
+                total=total,
+                done=idx,
+                error="",
+                message=f"更新中 {idx}/{total}: {item['jp_name']}",
+            )
+        set_refresh_state(
+            running=False,
+            total=total,
+            done=total,
+            error="",
+            message=f"更新完了 ({total}件)",
+            finished_at=time.time(),
+        )
+    except Exception as e:
+        current = get_refresh_state()
+        set_refresh_state(
+            running=False,
+            total=total,
+            done=int(current.get("done") or 0),
+            error=str(e),
+            message=f"更新失敗: {e}",
+            finished_at=time.time(),
+        )
+        raise
+
+
+def start_refresh_all_pokemon_details() -> bool:
+    with refresh_lock:
+        if refresh_state.get("running"):
+            return False
+        refresh_state.update({
+            "running": True,
+            "total": 0,
+            "done": 0,
+            "error": "",
+            "message": "更新を開始します",
+            "started_at": time.time(),
+            "finished_at": 0.0,
+        })
+
+    def worker():
+        try:
+            refresh_all_pokemon_details()
+        except Exception:
+            pass
+
+    threading.Thread(target=worker, daemon=True).start()
+    return True
+
+
 @app.before_request
 def require_access_key():
     if public_access_enabled():
@@ -1086,6 +1188,18 @@ def index():
 def api_status():
     with state_lock:
         return jsonify(dict(state))
+
+
+@app.get("/api/refresh-all-status")
+def api_refresh_all_status():
+    return jsonify(get_refresh_state())
+
+
+@app.post("/api/refresh-all")
+def api_refresh_all():
+    started = start_refresh_all_pokemon_details()
+    status = get_refresh_state()
+    return jsonify(status), (202 if started else 200)
 
 
 
@@ -1143,6 +1257,7 @@ def api_pokemon_search():
 @app.get("/api/pokemon-detail")
 def api_pokemon_detail():
     jp_name = str(request.args.get("name") or "").strip()
+    refresh = str(request.args.get("refresh") or "").strip().lower() in {"1", "true", "yes", "on"}
     if not jp_name:
         return jsonify({"error": "name is required"}), 400
 
@@ -1151,7 +1266,7 @@ def api_pokemon_detail():
         return jsonify({"error": "そのポケモンは見つかりませんでした"}), 404
 
     try:
-        detail = build_pokemon_detail(api_name, jp_name)
+        detail = build_pokemon_detail(api_name, jp_name, force_refresh=refresh)
         detail = dict(detail)
         sprite_url = str(detail.get("sprite") or "")
         detail["sprite"] = (
@@ -1159,6 +1274,7 @@ def api_pokemon_detail():
             or cache_sprite_locally(api_name, sprite_url)
             or proxy_sprite_url(sprite_url)
         )
+        detail["refreshed"] = refresh
         return jsonify(detail)
     except Exception as e:
         return jsonify({"error": f"詳細取得失敗: {e}"}), 500
