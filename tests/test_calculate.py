@@ -197,6 +197,28 @@ class CalculateApiTests(unittest.TestCase):
         self.assertTrue(data["running"])
         self.assertEqual(data["message"], "started")
 
+    def test_get_move_entry_uses_cache(self):
+        move_url = "https://pokeapi.co/api/v2/move/test-move"
+        cached = {
+            "name": "Test Move",
+            "type": "dragon",
+            "power": 80,
+            "class": "physical",
+            "class_jp": "physical",
+            "damage_class": "physical",
+        }
+        original_cache = dict(app.move_detail_cache)
+        try:
+            app.move_detail_cache.clear()
+            app.move_detail_cache[move_url] = dict(cached)
+            with patch.object(app, "fetch_json", side_effect=AssertionError("should not fetch")):
+                move_entry, changed = app.get_move_entry(move_url)
+            self.assertEqual(move_entry["name"], "Test Move")
+            self.assertFalse(changed)
+        finally:
+            app.move_detail_cache.clear()
+            app.move_detail_cache.update(original_cache)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent
 ALL_SPECIES_CACHE_FILE = BASE_DIR / "pokemon_species_cache.json"
 FINAL_SPECIES_CACHE_FILE = BASE_DIR / "pokemon_final_species_cache.json"
 DETAIL_CACHE_FILE = BASE_DIR / "pokemon_detail_cache.json"
+MOVE_DETAIL_CACHE_FILE = BASE_DIR / "pokemon_move_cache.json"
 FORM_ALIAS_CACHE_FILE = BASE_DIR / "pokemon_form_alias_cache.json"
 ABILITY_LIST_CACHE_FILE = BASE_DIR / "pokemon_ability_list_cache.json"
 ABILITY_DETAIL_CACHE_FILE = BASE_DIR / "pokemon_ability_detail_cache.json"
@@ -71,6 +72,7 @@ refresh_state = {
 all_species_index: list[dict] = []
 pokemon_index: list[dict] = []
 detail_cache: dict[str, dict] = {}
+move_detail_cache: dict[str, dict] = {}
 form_alias_cache: dict[str, dict[str, list[str]]] = {}
 resource_name_cache: dict[str, str] = {}
 name_to_api: dict[str, str] = {}
@@ -480,13 +482,14 @@ def invalidate_bad_caches() -> None:
 
 
 def load_caches() -> None:
-    global all_species_index, pokemon_index, detail_cache, form_alias_cache, ability_name_to_api, ability_detail_cache, ability_desc_override
+    global all_species_index, pokemon_index, detail_cache, move_detail_cache, form_alias_cache, ability_name_to_api, ability_detail_cache, ability_desc_override
 
     invalidate_bad_caches()
 
     all_species_index = load_json(ALL_SPECIES_CACHE_FILE, [])
     pokemon_index = load_json(FINAL_SPECIES_CACHE_FILE, [])
     detail_cache = load_json(DETAIL_CACHE_FILE, {})
+    move_detail_cache = load_json(MOVE_DETAIL_CACHE_FILE, {})
     form_alias_cache = load_json(FORM_ALIAS_CACHE_FILE, {})
     ability_name_to_api = load_json(ABILITY_LIST_CACHE_FILE, {})
     ability_detail_cache = load_json(ABILITY_DETAIL_CACHE_FILE, {})
@@ -498,6 +501,8 @@ def load_caches() -> None:
         pokemon_index = []
     if not isinstance(detail_cache, dict):
         detail_cache = {}
+    if not isinstance(move_detail_cache, dict):
+        move_detail_cache = {}
     if not isinstance(form_alias_cache, dict):
         form_alias_cache = {}
     if not isinstance(ability_name_to_api, dict):
@@ -705,6 +710,36 @@ def localize_resource_name(resource_url: str) -> str:
         return jp_name
     except Exception:
         return ""
+
+
+def build_move_entry(move_data: dict) -> dict:
+    damage_class_en = str((move_data.get("damage_class") or {}).get("name") or "").strip()
+    return {
+        "name": pick_japanese_name(move_data.get("names", [])) or str(move_data.get("name") or "").strip(),
+        "type": TYPE_JP_MAP.get(str((move_data.get("type") or {}).get("name") or ""), ""),
+        "power": move_data.get("power"),
+        "class": MOVE_CLASS_JP_MAP.get(damage_class_en, ""),
+        "class_jp": MOVE_CLASS_JP_MAP.get(damage_class_en, ""),
+        "damage_class": damage_class_en,
+    }
+
+
+def get_move_entry(move_url: str, *, force_refresh: bool = False) -> tuple[dict | None, bool]:
+    cached = move_detail_cache.get(move_url)
+    if (not force_refresh) and isinstance(cached, dict) and cached.get("name"):
+        return dict(cached), False
+
+    try:
+        move_data = fetch_json(move_url, timeout=20)
+    except Exception:
+        return None, False
+
+    move_entry = build_move_entry(move_data)
+    if not move_entry.get("name"):
+        return None, False
+
+    move_detail_cache[move_url] = move_entry
+    return dict(move_entry), True
 
 
 
@@ -961,13 +996,20 @@ def resolve_api_name_from_query(jp_name: str) -> str:
     return default_api_name
 
 
-def build_pokemon_detail(api_name: str, jp_name: str, *, force_refresh: bool = False) -> dict:
+def build_pokemon_detail(
+    api_name: str,
+    jp_name: str,
+    *,
+    force_refresh: bool = False,
+    save_cache: bool = True,
+) -> dict:
     cached = detail_cache.get(api_name)
     if (not force_refresh) and isinstance(cached, dict) and cached.get("moves") and cached.get("abilities"):
         cached = apply_special_form_overrides(api_name, dict(cached))
         cached = apply_special_form_abilities(api_name, cached)
         detail_cache[api_name] = cached
-        save_json(DETAIL_CACHE_FILE, detail_cache)
+        if save_cache:
+            save_json(DETAIL_CACHE_FILE, detail_cache)
         return cached
 
     pokemon_data = fetch_json(f"{POKEAPI_BASE}/pokemon/{api_name}", timeout=25)
@@ -1001,20 +1043,14 @@ def build_pokemon_detail(api_name: str, jp_name: str, *, force_refresh: bool = F
             seen_urls.add(move_url)
             unique_move_urls.append(move_url)
 
+    move_cache_changed = False
+
     def read_move(move_url: str) -> dict | None:
-        try:
-            move_data = fetch_json(move_url, timeout=20)
-            damage_class_en = str((move_data.get("damage_class") or {}).get("name") or "").strip()
-            return {
-                "name": pick_japanese_name(move_data.get("names", [])) or str(move_data.get("name") or "").strip(),
-                "type": TYPE_JP_MAP.get(str((move_data.get("type") or {}).get("name") or ""), ""),
-                "power": move_data.get("power"),
-                "class": MOVE_CLASS_JP_MAP.get(damage_class_en, ""),
-                "class_jp": MOVE_CLASS_JP_MAP.get(damage_class_en, ""),
-                "damage_class": damage_class_en,
-            }
-        except Exception:
-            return None
+        nonlocal move_cache_changed
+        move_entry, changed = get_move_entry(move_url)
+        if changed:
+            move_cache_changed = True
+        return move_entry
 
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(read_move, url) for url in unique_move_urls]
@@ -1022,6 +1058,9 @@ def build_pokemon_detail(api_name: str, jp_name: str, *, force_refresh: bool = F
             result = future.result()
             if result and result.get("name"):
                 move_entries.append(result)
+
+    if move_cache_changed:
+        save_json(MOVE_DETAIL_CACHE_FILE, move_detail_cache)
 
     move_entries.sort(key=lambda x: x["name"])
 
@@ -1068,7 +1107,8 @@ def build_pokemon_detail(api_name: str, jp_name: str, *, force_refresh: bool = F
     detail = apply_special_form_overrides(api_name, detail)
     detail = apply_special_form_abilities(api_name, detail)
     detail_cache[api_name] = detail
-    save_json(DETAIL_CACHE_FILE, detail_cache)
+    if save_cache:
+        save_json(DETAIL_CACHE_FILE, detail_cache)
     return detail
 
 
@@ -1100,7 +1140,9 @@ def refresh_all_pokemon_details() -> None:
 
     try:
         for idx, item in enumerate(targets, start=1):
-            build_pokemon_detail(item["api_name"], item["jp_name"], force_refresh=True)
+            build_pokemon_detail(item["api_name"], item["jp_name"], force_refresh=True, save_cache=False)
+            if idx % 20 == 0:
+                save_json(DETAIL_CACHE_FILE, detail_cache)
             set_refresh_state(
                 running=True,
                 total=total,
@@ -1108,6 +1150,7 @@ def refresh_all_pokemon_details() -> None:
                 error="",
                 message=f"更新中 {idx}/{total}: {item['jp_name']}",
             )
+        save_json(DETAIL_CACHE_FILE, detail_cache)
         set_refresh_state(
             running=False,
             total=total,
