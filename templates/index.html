@@ -1347,7 +1347,7 @@ function typeIconPath(typeName){
 
 const TYPE_CHART = {
   ノーマル:{かくとう:2,ゴースト:0},
-  ほのお:{みず:2,じめん:2,いわ:2,くさ:0.5,こおり:0.5,むし:0.5,はがね:0.5,フェアリー:0.5},
+  ほのお:{ほのお:0.5,みず:2,じめん:2,いわ:2,くさ:0.5,こおり:0.5,むし:0.5,はがね:0.5,フェアリー:0.5},
   みず:{でんき:2,くさ:2,ほのお:0.5,みず:0.5,こおり:0.5,はがね:0.5},
   でんき:{じめん:2,でんき:0.5,ひこう:0.5,はがね:0.5},
   くさ:{ほのお:2,こおり:2,どく:2,ひこう:2,むし:2,みず:0.5,でんき:0.5,くさ:0.5,じめん:0.5},
@@ -1963,6 +1963,11 @@ function sliderIndexToEv(index){
   return Math.min(252, 4 + (n - 1) * 8);
 }
 
+function sliderIndexToDisplay(index){
+  const n = Number(index || 0);
+  return Math.max(0, Math.min(32, n));
+}
+
 function actualToBaseStat(actual, isHp){
   const value = Number(actual || 0);
   return Math.max(1, value - (isHp ? 75 : 20));
@@ -2059,7 +2064,7 @@ function bindDefenderEV(){
     if (!slider || !val) return;
 
     const update = () => {
-      val.textContent = String(sliderIndexToEv(slider.value));
+      val.textContent = String(sliderIndexToDisplay(slider.value));
       updateDisplayedStats("defender");
       savePokemonSliderState('defender');
     };
@@ -2076,7 +2081,7 @@ function bindDefenderEV(){
 
 function updateMoveEvValue(){
   if (!moveEvSlider || !moveEvValue) return;
-  moveEvValue.textContent = String(sliderIndexToEv(moveEvSlider.value));
+  moveEvValue.textContent = String(sliderIndexToDisplay(moveEvSlider.value));
   updateDisplayedStats("attacker");
   savePokemonSliderState('attacker');
 }
