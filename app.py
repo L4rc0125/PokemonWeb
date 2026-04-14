@@ -754,6 +754,18 @@ def get_move_entry(move_url: str, *, force_refresh: bool = False) -> tuple[dict 
     return dict(move_entry), True
 
 
+def is_mega_api_name(api_name: str) -> bool:
+    name = str(api_name or "").strip().lower()
+    return bool(re.fullmatch(r"[a-z0-9-]+-mega(?:-[xy])?", name))
+
+
+def get_mega_base_api_name(api_name: str) -> str:
+    name = str(api_name or "").strip().lower()
+    if not is_mega_api_name(name):
+        return name
+    return re.sub(r"-mega(?:-[xy])?$", "", name)
+
+
 def parse_pokedb_move_usage_html(page_html: str) -> dict[str, float]:
     page_html = str(page_html or "")
     usage: dict[str, float] = {}
@@ -1099,7 +1111,25 @@ def build_pokemon_detail(
             save_json(DETAIL_CACHE_FILE, detail_cache)
         return cached
 
-    pokemon_data = fetch_json(f"{POKEAPI_BASE}/pokemon/{api_name}", timeout=25)
+    lookup_api_name = api_name
+    pokemon_data = None
+    try:
+        pokemon_data = fetch_json(f"{POKEAPI_BASE}/pokemon/{lookup_api_name}", timeout=25)
+    except Exception:
+        base_api_name = get_mega_base_api_name(api_name)
+        if base_api_name and base_api_name != api_name:
+            lookup_api_name = base_api_name
+            pokemon_data = fetch_json(f"{POKEAPI_BASE}/pokemon/{lookup_api_name}", timeout=25)
+        else:
+            raise
+
+    base_move_api_name = get_mega_base_api_name(api_name)
+    move_source_data = pokemon_data
+    if base_move_api_name and base_move_api_name != lookup_api_name:
+        try:
+            move_source_data = fetch_json(f"{POKEAPI_BASE}/pokemon/{base_move_api_name}", timeout=25)
+        except Exception:
+            move_source_data = pokemon_data
 
     sprite = (
         ((pokemon_data.get("sprites") or {}).get("front_default"))
@@ -1123,7 +1153,7 @@ def build_pokemon_detail(
     move_entries = []
     unique_move_urls = []
     seen_urls = set()
-    for item in pokemon_data.get("moves", []):
+    for item in move_source_data.get("moves", []):
         move = item.get("move") or {}
         move_url = move.get("url")
         if move_url and move_url not in seen_urls:

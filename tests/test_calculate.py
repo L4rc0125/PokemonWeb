@@ -221,10 +221,20 @@ class CalculateApiTests(unittest.TestCase):
 
     def test_parse_pokedb_move_usage_html(self):
         page_html = """
-        <h3>わざ</h3>
-        <div>しんそく</div><div>82.7%</div>
-        <div>じしん</div><div>71.3%</div>
-        <h3>とくせい</h3>
+        <div id="chart-trend-moves">
+          <div class="pokemon-move-list-item">
+            <div class="pokemon-move-list-item-bar">
+              <span class="pokemon-move-name">しんそく</span>
+            </div>
+            <span class="pokemon-move-rate">82.7<small>%</small></span>
+          </div>
+          <div class="pokemon-move-list-item">
+            <div class="pokemon-move-list-item-bar">
+              <span class="pokemon-move-name">じしん</span>
+            </div>
+            <span class="pokemon-move-rate">71.3<small>%</small></span>
+          </div>
+        </div>
         """
         usage = app.parse_pokedb_move_usage_html(page_html)
         self.assertEqual(usage["しんそく"], 82.7)
@@ -240,6 +250,81 @@ class CalculateApiTests(unittest.TestCase):
         sorted_moves = app.sort_moves_by_usage(moves, {"しんそく": 82.7, "じしん": 71.3, "げきりん": 31.6})
         self.assertEqual([move["name"] for move in sorted_moves[:3]], ["しんそく", "じしん", "げきりん"])
         self.assertIsNone(sorted_moves[-1]["usage_rate"])
+
+    def test_mega_form_inherits_base_moves(self):
+        original_detail_cache = dict(app.detail_cache)
+        original_move_cache = dict(app.move_detail_cache)
+
+        def fake_fetch_json(url, timeout=20):
+            if url.endswith("/pokemon/dragonite-mega"):
+                return {
+                    "id": 149,
+                    "sprites": {"front_default": "mega-sprite"},
+                    "abilities": [{"ability": {"name": "inner-focus", "url": "https://pokeapi.co/api/v2/ability/39/"}}],
+                    "moves": [],
+                    "types": [{"slot": 1, "type": {"name": "dragon"}}, {"slot": 2, "type": {"name": "flying"}}],
+                    "stats": [
+                        {"stat": {"name": "hp"}, "base_stat": 91},
+                        {"stat": {"name": "attack"}, "base_stat": 134},
+                        {"stat": {"name": "defense"}, "base_stat": 95},
+                        {"stat": {"name": "special-attack"}, "base_stat": 100},
+                        {"stat": {"name": "special-defense"}, "base_stat": 100},
+                        {"stat": {"name": "speed"}, "base_stat": 80},
+                    ],
+                }
+            if url.endswith("/pokemon/dragonite"):
+                return {
+                    "id": 149,
+                    "sprites": {"front_default": "base-sprite"},
+                    "abilities": [{"ability": {"name": "inner-focus", "url": "https://pokeapi.co/api/v2/ability/39/"}}],
+                    "moves": [
+                        {"move": {"url": "https://pokeapi.co/api/v2/move/1/"}},
+                        {"move": {"url": "https://pokeapi.co/api/v2/move/2/"}},
+                    ],
+                    "types": [{"slot": 1, "type": {"name": "dragon"}}, {"slot": 2, "type": {"name": "flying"}}],
+                    "stats": [
+                        {"stat": {"name": "hp"}, "base_stat": 91},
+                        {"stat": {"name": "attack"}, "base_stat": 134},
+                        {"stat": {"name": "defense"}, "base_stat": 95},
+                        {"stat": {"name": "special-attack"}, "base_stat": 100},
+                        {"stat": {"name": "special-defense"}, "base_stat": 100},
+                        {"stat": {"name": "speed"}, "base_stat": 80},
+                    ],
+                }
+            if url.endswith("/move/1/"):
+                return {
+                    "name": "extreme-speed",
+                    "names": [{"language": {"name": "ja"}, "name": "しんそく"}],
+                    "type": {"name": "normal"},
+                    "power": 80,
+                    "damage_class": {"name": "physical"},
+                }
+            if url.endswith("/move/2/"):
+                return {
+                    "name": "earthquake",
+                    "names": [{"language": {"name": "ja"}, "name": "じしん"}],
+                    "type": {"name": "ground"},
+                    "power": 100,
+                    "damage_class": {"name": "physical"},
+                }
+            raise AssertionError(url)
+
+        try:
+            app.detail_cache.clear()
+            app.move_detail_cache.clear()
+            with patch.object(app, "fetch_json", side_effect=fake_fetch_json), patch.object(
+                app, "localize_resource_name", return_value="せいしんりょく"
+            ), patch.object(app, "localize_ability_description", return_value=""), patch.object(
+                app, "get_pokedb_move_usage", return_value={"しんそく": 80.0, "じしん": 70.0}
+            ):
+                detail = app.build_pokemon_detail("dragonite-mega", "メガカイリュー", force_refresh=True, save_cache=False)
+            self.assertEqual([move["name"] for move in detail["moves"][:2]], ["しんそく", "じしん"])
+            self.assertEqual(detail["sprite"], "mega-sprite")
+        finally:
+            app.detail_cache.clear()
+            app.detail_cache.update(original_detail_cache)
+            app.move_detail_cache.clear()
+            app.move_detail_cache.update(original_move_cache)
 
 
 if __name__ == "__main__":
