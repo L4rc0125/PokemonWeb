@@ -285,7 +285,12 @@ def apply_special_form_overrides(api_name: str, detail: dict) -> dict:
             moves.append(dict(move))
             existing.add(name)
 
-    moves.sort(key=lambda x: str((x or {}).get("name") or ""))
+    moves.sort(
+        key=lambda item: (
+            -(float((item or {}).get("usage_rate")) if (item or {}).get("usage_rate") is not None else -1.0),
+            str((item or {}).get("name") or ""),
+        )
+    )
     return detail
 
 
@@ -750,33 +755,29 @@ def get_move_entry(move_url: str, *, force_refresh: bool = False) -> tuple[dict 
 
 
 def parse_pokedb_move_usage_html(page_html: str) -> dict[str, float]:
-    tokens: list[str] = []
-    for match in re.finditer(r">([^<>]+)<", str(page_html or ""), re.S):
-        token = html.unescape(match.group(1))
-        token = re.sub(r"\s+", " ", token).strip()
-        if token:
-            tokens.append(token)
-
+    page_html = str(page_html or "")
     usage: dict[str, float] = {}
-    in_moves = False
-    current_name = ""
-    for token in tokens:
-        if token == "わざ":
-            in_moves = True
-            current_name = ""
+
+    for item_html in re.findall(r'<div class="pokemon-move-list-item">(.*?)</div>\s*</div>\s*<span class="pokemon-move-rate">', page_html, re.S):
+        name_match = re.search(r'<span class="pokemon-move-name">(.*?)</span>', item_html, re.S)
+        if not name_match:
             continue
-        if in_moves and token in {"とくせい", "せいかく", "もちもの", "テラスタイプ"}:
-            break
-        if not in_moves:
+        name = html.unescape(name_match.group(1))
+        name = re.sub(r"\s+", " ", name).strip()
+        if not name:
             continue
-        if token == "リスト表示":
+
+    for name_match, rate_match in re.findall(
+        r'<span class="pokemon-move-name">(.*?)</span>.*?<span class="pokemon-move-rate">\s*([0-9]+(?:\.[0-9]+)?)\s*<small>%</small>\s*</span>',
+        page_html,
+        re.S,
+    ):
+        name = html.unescape(name_match)
+        name = re.sub(r"\s+", " ", name).strip()
+        if not name:
             continue
-        if re.fullmatch(r"\d+(?:\.\d+)?%", token):
-            if current_name and current_name not in usage:
-                usage[current_name] = float(token.rstrip("%"))
-            current_name = ""
-            continue
-        current_name = token
+        usage[name] = float(rate_match)
+
     return usage
 
 
