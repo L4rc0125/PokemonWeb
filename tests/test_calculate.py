@@ -219,6 +219,28 @@ class CalculateApiTests(unittest.TestCase):
             app.move_detail_cache.clear()
             app.move_detail_cache.update(original_cache)
 
+    def test_parse_pokedb_move_usage_html(self):
+        page_html = """
+        <h3>わざ</h3>
+        <div>しんそく</div><div>82.7%</div>
+        <div>じしん</div><div>71.3%</div>
+        <h3>とくせい</h3>
+        """
+        usage = app.parse_pokedb_move_usage_html(page_html)
+        self.assertEqual(usage["しんそく"], 82.7)
+        self.assertEqual(usage["じしん"], 71.3)
+
+    def test_sort_moves_by_usage(self):
+        moves = [
+            {"name": "げきりん"},
+            {"name": "しんそく"},
+            {"name": "じしん"},
+            {"name": "はねる"},
+        ]
+        sorted_moves = app.sort_moves_by_usage(moves, {"しんそく": 82.7, "じしん": 71.3, "げきりん": 31.6})
+        self.assertEqual([move["name"] for move in sorted_moves[:3]], ["しんそく", "じしん", "げきりん"])
+        self.assertIsNone(sorted_moves[-1]["usage_rate"])
+
 
 if __name__ == "__main__":
     unittest.main()

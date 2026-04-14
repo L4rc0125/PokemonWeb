@@ -3,6 +3,7 @@ from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 import difflib
+import html
 import json
 import os
 import re
@@ -23,6 +24,7 @@ ALL_SPECIES_CACHE_FILE = BASE_DIR / "pokemon_species_cache.json"
 FINAL_SPECIES_CACHE_FILE = BASE_DIR / "pokemon_final_species_cache.json"
 DETAIL_CACHE_FILE = BASE_DIR / "pokemon_detail_cache.json"
 MOVE_DETAIL_CACHE_FILE = BASE_DIR / "pokemon_move_cache.json"
+MOVE_USAGE_CACHE_FILE = BASE_DIR / "pokemon_move_usage_cache.json"
 FORM_ALIAS_CACHE_FILE = BASE_DIR / "pokemon_form_alias_cache.json"
 ABILITY_LIST_CACHE_FILE = BASE_DIR / "pokemon_ability_list_cache.json"
 ABILITY_DETAIL_CACHE_FILE = BASE_DIR / "pokemon_ability_detail_cache.json"
@@ -30,6 +32,7 @@ ABILITY_DESC_OVERRIDE_FILE = BASE_DIR / "ability_desc.json"
 ACCESS_KEY = os.environ.get("POKEMONWEB_ACCESS_KEY", "mFYXkElhk0qvdp8LxIGfgrMpQ-XisfNA")
 
 POKEAPI_BASE = "https://pokeapi.co/api/v2"
+POKEDB_SV_BASE = "https://sv.pokedb.tokyo"
 SPECIES_LIST_URL = f"{POKEAPI_BASE}/pokemon-species?limit=2000"
 
 DEFAULT_ATTACKER = "ガブリアス"
@@ -73,6 +76,7 @@ all_species_index: list[dict] = []
 pokemon_index: list[dict] = []
 detail_cache: dict[str, dict] = {}
 move_detail_cache: dict[str, dict] = {}
+move_usage_cache: dict[str, dict] = {}
 form_alias_cache: dict[str, dict[str, list[str]]] = {}
 resource_name_cache: dict[str, str] = {}
 name_to_api: dict[str, str] = {}
@@ -482,7 +486,7 @@ def invalidate_bad_caches() -> None:
 
 
 def load_caches() -> None:
-    global all_species_index, pokemon_index, detail_cache, move_detail_cache, form_alias_cache, ability_name_to_api, ability_detail_cache, ability_desc_override
+    global all_species_index, pokemon_index, detail_cache, move_detail_cache, move_usage_cache, form_alias_cache, ability_name_to_api, ability_detail_cache, ability_desc_override
 
     invalidate_bad_caches()
 
@@ -490,6 +494,7 @@ def load_caches() -> None:
     pokemon_index = load_json(FINAL_SPECIES_CACHE_FILE, [])
     detail_cache = load_json(DETAIL_CACHE_FILE, {})
     move_detail_cache = load_json(MOVE_DETAIL_CACHE_FILE, {})
+    move_usage_cache = load_json(MOVE_USAGE_CACHE_FILE, {})
     form_alias_cache = load_json(FORM_ALIAS_CACHE_FILE, {})
     ability_name_to_api = load_json(ABILITY_LIST_CACHE_FILE, {})
     ability_detail_cache = load_json(ABILITY_DETAIL_CACHE_FILE, {})
@@ -503,6 +508,8 @@ def load_caches() -> None:
         detail_cache = {}
     if not isinstance(move_detail_cache, dict):
         move_detail_cache = {}
+    if not isinstance(move_usage_cache, dict):
+        move_usage_cache = {}
     if not isinstance(form_alias_cache, dict):
         form_alias_cache = {}
     if not isinstance(ability_name_to_api, dict):
@@ -740,6 +747,78 @@ def get_move_entry(move_url: str, *, force_refresh: bool = False) -> tuple[dict 
 
     move_detail_cache[move_url] = move_entry
     return dict(move_entry), True
+
+
+def parse_pokedb_move_usage_html(page_html: str) -> dict[str, float]:
+    tokens: list[str] = []
+    for match in re.finditer(r">([^<>]+)<", str(page_html or ""), re.S):
+        token = html.unescape(match.group(1))
+        token = re.sub(r"\s+", " ", token).strip()
+        if token:
+            tokens.append(token)
+
+    usage: dict[str, float] = {}
+    in_moves = False
+    current_name = ""
+    for token in tokens:
+        if token == "わざ":
+            in_moves = True
+            current_name = ""
+            continue
+        if in_moves and token in {"とくせい", "せいかく", "もちもの", "テラスタイプ"}:
+            break
+        if not in_moves:
+            continue
+        if token == "リスト表示":
+            continue
+        if re.fullmatch(r"\d+(?:\.\d+)?%", token):
+            if current_name and current_name not in usage:
+                usage[current_name] = float(token.rstrip("%"))
+            current_name = ""
+            continue
+        current_name = token
+    return usage
+
+
+def get_pokedb_move_usage(dex_no: int, *, rule: int = 0, force_refresh: bool = False) -> dict[str, float]:
+    cache_key = f"{int(dex_no):04d}-00|{int(rule)}"
+    cached = move_usage_cache.get(cache_key)
+    if (not force_refresh) and isinstance(cached, dict) and cached.get("moves"):
+        return {
+            str(name): float(rate)
+            for name, rate in (cached.get("moves") or {}).items()
+            if str(name or "").strip()
+        }
+
+    try:
+        page_html = _session.get(
+            f"{POKEDB_SV_BASE}/pokemon/show/{int(dex_no):04d}-00?rule={int(rule)}",
+            timeout=20,
+        ).text
+        moves = parse_pokedb_move_usage_html(page_html)
+    except Exception:
+        moves = {}
+
+    move_usage_cache[cache_key] = {"moves": moves, "updated_at": int(time.time())}
+    save_json(MOVE_USAGE_CACHE_FILE, move_usage_cache)
+    return dict(moves)
+
+
+def sort_moves_by_usage(moves: list[dict], usage_map: dict[str, float]) -> list[dict]:
+    usage_map = {str(name or "").strip(): float(rate) for name, rate in (usage_map or {}).items()}
+    enriched = []
+    for move in moves or []:
+        item = dict(move or {})
+        name = str(item.get("name") or "").strip()
+        item["usage_rate"] = usage_map.get(name)
+        enriched.append(item)
+    return sorted(
+        enriched,
+        key=lambda item: (
+            -(float(item["usage_rate"]) if item.get("usage_rate") is not None else -1.0),
+            str(item.get("name") or ""),
+        ),
+    )
 
 
 
@@ -1004,7 +1083,14 @@ def build_pokemon_detail(
     save_cache: bool = True,
 ) -> dict:
     cached = detail_cache.get(api_name)
-    if (not force_refresh) and isinstance(cached, dict) and cached.get("moves") and cached.get("abilities"):
+    cached_ready = (
+        isinstance(cached, dict)
+        and cached.get("moves")
+        and cached.get("abilities")
+        and cached.get("dex_no")
+        and any((move or {}).get("usage_rate") is not None for move in (cached.get("moves") or []))
+    )
+    if (not force_refresh) and cached_ready:
         cached = apply_special_form_overrides(api_name, dict(cached))
         cached = apply_special_form_abilities(api_name, cached)
         detail_cache[api_name] = cached
@@ -1062,7 +1148,11 @@ def build_pokemon_detail(
     if move_cache_changed:
         save_json(MOVE_DETAIL_CACHE_FILE, move_detail_cache)
 
-    move_entries.sort(key=lambda x: x["name"])
+    dex_no = int(pokemon_data.get("id") or 0)
+    if dex_no > 0:
+        move_entries = sort_moves_by_usage(move_entries, get_pokedb_move_usage(dex_no))
+    else:
+        move_entries.sort(key=lambda x: x["name"])
 
     type_names = []
     for item in sorted(pokemon_data.get("types", []), key=lambda x: int(x.get("slot", 0))):
@@ -1090,6 +1180,7 @@ def build_pokemon_detail(
     detail = {
         "jp_name": jp_name,
         "api_name": api_name,
+        "dex_no": dex_no,
         "sprite": sprite,
         "abilities": abilities,
         "ability_descriptions": ability_descriptions,
