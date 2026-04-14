@@ -16277,7 +16277,15 @@
     "ability_descriptions": {
       "すじがねいり": "相手の特性の影響を受けずに技を出せる"
     },
-    "moves": [],
+    "moves": [      {
+        "name": "あなをほる",
+        "type": "じめん",
+        "power": 80,
+        "class": "物理",
+        "class_jp": "物理",
+        "damage_class": "physical"
+      },
+    ],
     "types": [
       "はがね",
       "ひこう"
